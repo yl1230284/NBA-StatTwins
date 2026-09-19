@@ -302,7 +302,19 @@ if app_mode == "Vector Similarity Search":
         'PFD': (min_pfd, max_pfd),
     }
 
-    # Fetch target player row via normalized name matching
+    # Run Vector Similarity Search with Hard Range Filters
+    results = engine.find_similar_players(
+        target_player_season,
+        top_n=top_n,
+        stat_mode=stat_mode,
+        target_season_filter=season_filter,
+        allow_same_player=allow_same_player,
+        unique_players_only=unique_players_only,
+        stat_filters=stat_filters_dict,
+        weights=weights
+    )
+
+    # Fetch updated target player row (with ACTIVE_* stat columns populated)
     norm_target = normalize_player_name(target_player_season)
     target_match = engine.df[engine.df['norm_display_season'] == norm_target]
     if target_match.empty:
@@ -316,31 +328,24 @@ if app_mode == "Vector Similarity Search":
             salary_val = target_row.get('salary', np.nan)
             salary_str = f"${salary_val/1e6:.2f}M" if pd.notnull(salary_val) and salary_val > 0 else "N/A"
 
-            # 2 rows of 3 metrics to ensure numbers NEVER truncate with ...
+            t_pts = target_row.get('ACTIVE_PTS') if 'ACTIVE_PTS' in target_row and pd.notnull(target_row.get('ACTIVE_PTS')) else target_row.get('PTS', 0)
+            t_oreb = target_row.get('ACTIVE_OREB') if 'ACTIVE_OREB' in target_row and pd.notnull(target_row.get('ACTIVE_OREB')) else target_row.get('OREB', 0)
+            t_dreb = target_row.get('ACTIVE_DREB') if 'ACTIVE_DREB' in target_row and pd.notnull(target_row.get('ACTIVE_DREB')) else target_row.get('DREB', 0)
+            t_ast = target_row.get('ACTIVE_AST') if 'ACTIVE_AST' in target_row and pd.notnull(target_row.get('ACTIVE_AST')) else target_row.get('AST', 0)
+
+            # 2 rows of 3 metrics dynamically scaled to selected stat_mode
             m1, m2, m3 = st.columns(3)
-            m1.metric("Points", f"{target_row.get('PTS', 0):.1f}")
-            m2.metric("Off Rebounds", f"{target_row.get('OREB', 0):.1f}")
-            m3.metric("Def Rebounds", f"{target_row.get('DREB', 0):.1f}")
+            m1.metric(f"Points ({stat_mode})", f"{float(t_pts):.1f}")
+            m2.metric(f"Off Rebounds ({stat_mode})", f"{float(t_oreb):.1f}")
+            m3.metric(f"Def Rebounds ({stat_mode})", f"{float(t_dreb):.1f}")
 
             st.write("") # Spacer
             m4, m5, m6 = st.columns(3)
-            m4.metric("Assists", f"{target_row.get('AST', 0):.1f}")
+            m4.metric(f"Assists ({stat_mode})", f"{float(t_ast):.1f}")
             m5.metric("True Shooting %", f"{target_row.get('TS_PCT', 0)*100:.1f}%")
             m6.metric("Salary", salary_str)
 
     st.markdown("---")
-
-    # Run Vector Similarity Search with Hard Range Filters
-    results = engine.find_similar_players(
-        target_player_season,
-        top_n=top_n,
-        stat_mode=stat_mode,
-        target_season_filter=season_filter,
-        allow_same_player=allow_same_player,
-        unique_players_only=unique_players_only,
-        stat_filters=stat_filters_dict,
-        weights=weights
-    )
 
     if not results.empty:
         st.markdown(f"### Top {top_n} Vector Similarity Matches ({stat_mode}):")

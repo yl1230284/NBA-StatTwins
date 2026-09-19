@@ -148,17 +148,22 @@ class NBASimilarityEngine:
         merged['PER36_FTM'] = (merged['FTM'] / min_factor) * 36
         merged['PER36_PFD'] = (merged['PFD'] / min_factor) * 36
 
-        # Per 100 Possessions calculations
-        merged['PER100_PTS'] = (merged['PTS'] / min_factor) * 48 * (100 / 98.5)
-        merged['PER100_REB'] = (merged['REB'] / min_factor) * 48 * (100 / 98.5)
-        merged['PER100_OREB'] = (merged['OREB'] / min_factor) * 48 * (100 / 98.5)
-        merged['PER100_DREB'] = (merged['DREB'] / min_factor) * 48 * (100 / 98.5)
-        merged['PER100_AST'] = (merged['AST'] / min_factor) * 48 * (100 / 98.5)
-        merged['PER100_STL'] = (merged['STL'] / min_factor) * 48 * (100 / 98.5)
-        merged['PER100_BLK'] = (merged['BLK'] / min_factor) * 48 * (100 / 98.5)
-        merged['PER100_FG3M'] = (merged['FG3M'] / min_factor) * 48 * (100 / 98.5)
-        merged['PER100_FTM'] = (merged['FTM'] / min_factor) * 48 * (100 / 98.5)
-        merged['PER100_PFD'] = (merged['PFD'] / min_factor) * 48 * (100 / 98.5)
+        # Per 100 Possessions calculations using player-specific on-court PACE and total POSS
+        if 'PACE' in merged.columns:
+            pace_factor = np.where(pd.to_numeric(merged['PACE'], errors='coerce') > 0, pd.to_numeric(merged['PACE'], errors='coerce'), 98.5)
+        else:
+            pace_factor = 98.5
+
+        merged['PER100_PTS'] = (merged['PTS'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_REB'] = (merged['REB'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_OREB'] = (merged['OREB'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_DREB'] = (merged['DREB'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_AST'] = (merged['AST'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_STL'] = (merged['STL'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_BLK'] = (merged['BLK'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_FG3M'] = (merged['FG3M'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_FTM'] = (merged['FTM'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_PFD'] = (merged['PFD'] / min_factor) * 48 * (100 / pace_factor)
 
         self.df = merged.reset_index(drop=True)
         print(f"[Similarity Engine] Successfully loaded & prepared multi-season vector space for {len(self.df)} player-season profiles.")

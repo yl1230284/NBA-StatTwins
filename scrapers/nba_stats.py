@@ -51,15 +51,32 @@ class NBAStatsScraper:
             return pd.DataFrame()
 
     def get_single_season_player_stats(self, season: str, per_mode: str = "PerGame") -> pd.DataFrame:
-        """Fetch player stats for a single season."""
+        """Fetch player stats and advanced PACE/POSS for a single season."""
+        base_df = pd.DataFrame()
+        adv_df = pd.DataFrame()
+
         try:
             from nba_api.stats.endpoints import leaguedashplayerstats
-            endpoint = leaguedashplayerstats.LeagueDashPlayerStats(season=season, per_mode_detailed=per_mode, timeout=self.timeout)
-            df = endpoint.get_data_frames()[0]
-            df['SEASON'] = season
-            df['DISPLAY_NAME_SEASON'] = df['PLAYER_NAME'] + " (" + season + ")"
-            print(f"[NBA Stats] Retrieved stats for {len(df)} players ({season}) via nba_api.")
-            return df
+            base_endpoint = leaguedashplayerstats.LeagueDashPlayerStats(season=season, per_mode_detailed=per_mode, timeout=self.timeout)
+            base_df = base_endpoint.get_data_frames()[0]
+            
+            try:
+                adv_endpoint = leaguedashplayerstats.LeagueDashPlayerStats(season=season, measure_type_detailed_defense='Advanced', timeout=self.timeout)
+                adv_df = adv_endpoint.get_data_frames()[0]
+            except Exception as adv_e:
+                print(f"[NBA Stats] Advanced stats fetch error for {season}: {adv_e}")
+
+            if not base_df.empty:
+                base_df['SEASON'] = season
+                base_df['DISPLAY_NAME_SEASON'] = base_df['PLAYER_NAME'] + " (" + season + ")"
+
+                if not adv_df.empty and 'PLAYER_ID' in adv_df.columns:
+                    adv_cols = [c for c in ['PLAYER_ID', 'PACE', 'POSS'] if c in adv_df.columns]
+                    adv_subset = adv_df[adv_cols].drop_duplicates(subset=['PLAYER_ID'])
+                    base_df = pd.merge(base_df, adv_subset, on='PLAYER_ID', how='left')
+
+                print(f"[NBA Stats] Retrieved stats (Base + Advanced PACE/POSS) for {len(base_df)} players ({season}) via nba_api.")
+                return base_df
         except Exception as ex:
             print(f"[NBA Stats] nba_api leaguedashplayerstats failed for {season}: {ex}, attempting direct API call...")
 
