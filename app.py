@@ -72,17 +72,26 @@ allow_same_player = st.sidebar.checkbox(
     help="When checked, other seasons of the same player (e.g. Luka 2024-25 vs Luka 2022-23) can appear in results."
 )
 
+similarity_metric = st.sidebar.selectbox(
+    "Similarity Algorithm",
+    ["Weighted Euclidean (Distance-Based - Recommended)", "Cosine Similarity (Playstyle Direction)"],
+    index=0,
+    help="Weighted Euclidean matches true statistics & volume (recommended, avoids false 100% matches when focusing on specific stats). Cosine Similarity compares the ratio of stats regardless of volume."
+)
+metric_mode = "euclidean" if "Euclidean" in similarity_metric else "cosine"
+
 ALL_CARD_ATTRIBUTES = [
-    "Points (PTS)", "Offensive Rebounds (OREB)", "Defensive Rebounds (DREB)", "Total Rebounds (REB)",
-    "Assists (AST)", "Steals (STL)", "Blocks (BLK)", "3-Pointers (3PM)",
-    "True Shooting (TS%)", "Effective FG (eFG%)", "Field Goal % (FG%)", "3-Point % (3P%)",
-    "Assist-to-Turnover (AST/TO)", "Fouls Drawn (PFD)", "Net Plus-Minus (+/-)", "Age", "Salary"
+    "Points (PTS)", "Total Rebounds (REB)", "Offensive Rebounds (OREB)", "Defensive Rebounds (DREB)",
+    "Assists (AST)", "Steals (STL)", "Blocks (BLK)", "3-Pointers (3PM)", "Free Throws (FTM)",
+    "Field Goal % (FG%)", "3-Point % (3P%)", "Free Throw % (FT%)", "True Shooting (TS%)", "Effective FG (eFG%)",
+    "Assist-to-Turnover (AST/TO)", "Fouls Drawn (PFD)", "Net Plus-Minus (+/-)",
+    "Fantasy Points (Fantasy PTS)", "Age", "Salary"
 ]
 
 selected_attributes = st.sidebar.multiselect(
     "Visible Player Card Attributes",
     options=ALL_CARD_ATTRIBUTES,
-    default=["Points (PTS)", "Offensive Rebounds (OREB)", "Defensive Rebounds (DREB)", "Assists (AST)", "True Shooting (TS%)", "Assist-to-Turnover (AST/TO)", "Salary"]
+    default=["Points (PTS)", "Total Rebounds (REB)", "Assists (AST)", "True Shooting (TS%)", "Assist-to-Turnover (AST/TO)", "Salary"]
 )
 
 st.sidebar.markdown("---")
@@ -90,7 +99,8 @@ st.sidebar.info("Vector Tip: Set Max Salary in the candidate filter section to d
 
 # Title Header
 st.markdown("<div class='main-title'>NBA Player Vector Similarity & Comparison Tool</div>", unsafe_allow_html=True)
-st.markdown(f"<div class='sub-title'><b>Multi-Season Dataset (2022-23 to 2025-26)</b> | Vector Cosine Distance ({stat_mode})</div>", unsafe_allow_html=True)
+metric_label = "Weighted Euclidean" if metric_mode == "euclidean" else "Cosine Distance"
+st.markdown(f"<div class='sub-title'><b>Multi-Season Dataset (2022-23 to 2025-26)</b> | Vector Similarity ({stat_mode}) | Metric: <b>{metric_label}</b></div>", unsafe_allow_html=True)
 
 if not player_season_list:
     st.error("No player data loaded. Please make sure the SQLite database output/nba_data.db exists.")
@@ -108,22 +118,25 @@ def format_card_stats(row, selected_attrs):
     stl_val = row.get('ACTIVE_STL') if 'ACTIVE_STL' in row and pd.notnull(row.get('ACTIVE_STL')) else row.get('STL', 0)
     blk_val = row.get('ACTIVE_BLK') if 'ACTIVE_BLK' in row and pd.notnull(row.get('ACTIVE_BLK')) else row.get('BLK', 0)
     fg3m_val = row.get('ACTIVE_FG3M') if 'ACTIVE_FG3M' in row and pd.notnull(row.get('ACTIVE_FG3M')) else row.get('FG3M', 0)
+    ftm_val = row.get('ACTIVE_FTM') if 'ACTIVE_FTM' in row and pd.notnull(row.get('ACTIVE_FTM')) else row.get('FTM', 0)
     pfd_val = row.get('ACTIVE_PFD') if 'ACTIVE_PFD' in row and pd.notnull(row.get('ACTIVE_PFD')) else row.get('PFD', 0)
+    fpts_val = row.get('ACTIVE_NBA_FANTASY_PTS') if 'ACTIVE_NBA_FANTASY_PTS' in row and pd.notnull(row.get('ACTIVE_NBA_FANTASY_PTS')) else row.get('NBA_FANTASY_PTS', 0)
     
     ts_val = (row.get('TS_PCT', 0) or 0) * 100
     efg_val = (row.get('eFG_PCT', 0) or 0) * 100
     fg_val = (row.get('FG_PCT', 0) or 0) * 100
     fg3_val = (row.get('FG3_PCT', 0) or 0) * 100
+    ft_val = (row.get('FT_PCT', 0) or 0) * 100
     ast_to_val = row.get('AST_TO_RATIO', 0) or 0
     
     if "Points (PTS)" in selected_attrs:
         stat_parts.append(f"**PTS**: {float(pts_val):.1f}")
+    if "Total Rebounds (REB)" in selected_attrs:
+        stat_parts.append(f"**REB**: {float(reb_val):.1f}")
     if "Offensive Rebounds (OREB)" in selected_attrs:
         stat_parts.append(f"**OREB**: {float(oreb_val):.1f}")
     if "Defensive Rebounds (DREB)" in selected_attrs:
         stat_parts.append(f"**DREB**: {float(dreb_val):.1f}")
-    if "Total Rebounds (REB)" in selected_attrs:
-        stat_parts.append(f"**REB**: {float(reb_val):.1f}")
     if "Assists (AST)" in selected_attrs:
         stat_parts.append(f"**AST**: {float(ast_val):.1f}")
     if "Steals (STL)" in selected_attrs:
@@ -132,20 +145,26 @@ def format_card_stats(row, selected_attrs):
         stat_parts.append(f"**BLK**: {float(blk_val):.1f}")
     if "3-Pointers (3PM)" in selected_attrs:
         stat_parts.append(f"**3PM**: {float(fg3m_val):.1f}")
-    if "True Shooting (TS%)" in selected_attrs:
-        stat_parts.append(f"**TS%**: {float(ts_val):.1f}%")
-    if "Effective FG (eFG%)" in selected_attrs:
-        stat_parts.append(f"**eFG%**: {float(efg_val):.1f}%")
+    if "Free Throws (FTM)" in selected_attrs:
+        stat_parts.append(f"**FTM**: {float(ftm_val):.1f}")
     if "Field Goal % (FG%)" in selected_attrs:
         stat_parts.append(f"**FG%**: {float(fg_val):.1f}%")
     if "3-Point % (3P%)" in selected_attrs:
         stat_parts.append(f"**3P%**: {float(fg3_val):.1f}%")
+    if "Free Throw % (FT%)" in selected_attrs:
+        stat_parts.append(f"**FT%**: {float(ft_val):.1f}%")
+    if "True Shooting (TS%)" in selected_attrs:
+        stat_parts.append(f"**TS%**: {float(ts_val):.1f}%")
+    if "Effective FG (eFG%)" in selected_attrs:
+        stat_parts.append(f"**eFG%**: {float(efg_val):.1f}%")
     if "Assist-to-Turnover (AST/TO)" in selected_attrs:
         stat_parts.append(f"**AST/TO**: {float(ast_to_val):.2f}")
     if "Fouls Drawn (PFD)" in selected_attrs:
         stat_parts.append(f"**PFD**: {float(pfd_val):.1f}")
     if "Net Plus-Minus (+/-)" in selected_attrs:
         stat_parts.append(f"**+/-**: {float(row.get('PLUS_MINUS', 0)):+.1f}")
+    if "Fantasy Points (Fantasy PTS)" in selected_attrs:
+        stat_parts.append(f"**FPTS**: {float(fpts_val):.1f}")
     if "Age" in selected_attrs:
         stat_parts.append(f"**Age**: {row.get('AGE', 'N/A')}")
         
@@ -251,33 +270,88 @@ if app_mode == "Vector Similarity Search":
                 min_pfd = c_pfd1.number_input("Min Fouls Drawn (PFD)", value=None, min_value=0.0, max_value=12.0, step=0.1, placeholder="e.g. 2.0")
                 max_pfd = c_pfd2.number_input("Max Fouls Drawn (PFD)", value=None, min_value=0.0, max_value=12.0, step=0.1, placeholder="e.g. 8.0")
 
-        # EXPANDABLE ATTRIBUTE FOCUS WEIGHTS
-        with st.expander("Customize Attribute Focus Weights"):
-            w_pts = st.slider("Scoring (PTS)", 0.0, 2.0, 1.0, 0.1)
-            w_oreb = st.slider("Offensive Rebounding (OREB)", 0.0, 2.0, 1.0, 0.1)
-            w_dreb = st.slider("Defensive Rebounding (DREB)", 0.0, 2.0, 1.0, 0.1)
-            w_ast = st.slider("Playmaking (AST)", 0.0, 2.0, 1.0, 0.1)
-            w_ast_to = st.slider("Assist-to-Turnover Ratio", 0.0, 2.0, 1.0, 0.1)
-            w_def = st.slider("Defense (STL & BLK)", 0.0, 2.0, 1.0, 0.1)
-            w_3p = st.slider("3-Point Shooting (3P% & 3PM)", 0.0, 2.0, 1.0, 0.1)
-            w_ts = st.slider("True Shooting % / Efficiency", 0.0, 2.0, 1.0, 0.1)
-            w_pfd = st.slider("Foul Drawing (PFD)", 0.0, 2.0, 1.0, 0.1)
-            w_pm = st.slider("Net Impact (+/-)", 0.0, 2.0, 1.0, 0.1)
-            w_age = st.slider("Player Age", 0.0, 2.0, 0.5, 0.1)
+        # EXPANDABLE ATTRIBUTE FOCUS WEIGHTS (All 19 Stats Individually Controllable)
+        with st.expander("Customize Attribute Focus Weights (All 19 Stats)"):
+            st.markdown("Adjust individual stat weights (0.0 to 2.0). Setting a weight to 0 completely removes it from similarity calculation.")
+
+            # Quick Preset Buttons
+            weight_keys_all = [
+                'w_pts', 'w_fg3m', 'w_ftm', 'w_fg_pct', 'w_fg3_pct', 'w_ft_pct', 'w_efg_pct', 'w_ts_pct',
+                'w_ast', 'w_ast_to', 'w_stl', 'w_blk', 'w_pfd',
+                'w_reb', 'w_oreb', 'w_dreb', 'w_pm', 'w_fantasy', 'w_age'
+            ]
+            for k in weight_keys_all:
+                if k not in st.session_state:
+                    st.session_state[k] = 0.5 if k == 'w_age' else 1.0
+
+            p_col1, p_col2, p_col3, p_col4 = st.columns(4)
+            if p_col1.button("Balanced (All 1.0)", use_container_width=True):
+                for k in weight_keys_all:
+                    st.session_state[k] = 0.5 if k == 'w_age' else 1.0
+                st.rerun()
+            if p_col2.button("Scoring Only (PTS=1)", use_container_width=True):
+                for k in weight_keys_all:
+                    st.session_state[k] = 1.0 if k == 'w_pts' else 0.0
+                st.rerun()
+            if p_col3.button("Playmaking Focus", use_container_width=True):
+                for k in weight_keys_all:
+                    st.session_state[k] = 1.0 if k in ['w_ast', 'w_ast_to'] else 0.0
+                st.rerun()
+            if p_col4.button("Zero All (0.0)", use_container_width=True):
+                for k in weight_keys_all:
+                    st.session_state[k] = 0.0
+                st.rerun()
+
+            st.write("")
+
+            col_w1, col_w2, col_w3 = st.columns(3)
+            with col_w1:
+                st.markdown("#### Scoring & Shooting")
+                w_pts = st.slider("Scoring (PTS)", 0.0, 2.0, step=0.1, key="w_pts")
+                w_fg3m = st.slider("3-Pointers Made (3PM)", 0.0, 2.0, step=0.1, key="w_fg3m")
+                w_ftm = st.slider("Free Throws Made (FTM)", 0.0, 2.0, step=0.1, key="w_ftm")
+                w_fg_pct = st.slider("Field Goal % (FG%)", 0.0, 2.0, step=0.1, key="w_fg_pct")
+                w_fg3_pct = st.slider("3-Point % (3P%)", 0.0, 2.0, step=0.1, key="w_fg3_pct")
+                w_ft_pct = st.slider("Free Throw % (FT%)", 0.0, 2.0, step=0.1, key="w_ft_pct")
+                w_efg_pct = st.slider("Effective FG % (eFG%)", 0.0, 2.0, step=0.1, key="w_efg_pct")
+                w_ts_pct = st.slider("True Shooting % (TS%)", 0.0, 2.0, step=0.1, key="w_ts_pct")
+
+            with col_w2:
+                st.markdown("#### Playmaking & Defense")
+                w_ast = st.slider("Playmaking (AST)", 0.0, 2.0, step=0.1, key="w_ast")
+                w_ast_to = st.slider("Assist-to-Turnover (AST/TO)", 0.0, 2.0, step=0.1, key="w_ast_to")
+                w_stl = st.slider("Steals (STL)", 0.0, 2.0, step=0.1, key="w_stl")
+                w_blk = st.slider("Blocks (BLK)", 0.0, 2.0, step=0.1, key="w_blk")
+                w_pfd = st.slider("Fouls Drawn (PFD)", 0.0, 2.0, step=0.1, key="w_pfd")
+
+            with col_w3:
+                st.markdown("#### Rebounds, Impact & Bio")
+                w_reb = st.slider("Total Rebounds (REB)", 0.0, 2.0, step=0.1, key="w_reb")
+                w_oreb = st.slider("Offensive Rebounding (OREB)", 0.0, 2.0, step=0.1, key="w_oreb")
+                w_dreb = st.slider("Defensive Rebounding (DREB)", 0.0, 2.0, step=0.1, key="w_dreb")
+                w_pm = st.slider("Net Impact (+/-)", 0.0, 2.0, step=0.1, key="w_pm")
+                w_fantasy = st.slider("NBA Fantasy Points", 0.0, 2.0, step=0.1, key="w_fantasy")
+                w_age = st.slider("Player Age", 0.0, 2.0, step=0.1, key="w_age")
 
     weights = {
         'PTS': w_pts, 'PER36_PTS': w_pts, 'PER100_PTS': w_pts,
+        'REB': w_reb, 'PER36_REB': w_reb, 'PER100_REB': w_reb,
         'OREB': w_oreb, 'PER36_OREB': w_oreb, 'PER100_OREB': w_oreb,
         'DREB': w_dreb, 'PER36_DREB': w_dreb, 'PER100_DREB': w_dreb,
-        'REB': (w_oreb + w_dreb)/2, 'PER36_REB': (w_oreb + w_dreb)/2, 'PER100_REB': (w_oreb + w_dreb)/2,
         'AST': w_ast, 'PER36_AST': w_ast, 'PER100_AST': w_ast,
         'AST_TO_RATIO': w_ast_to,
-        'STL': w_def, 'PER36_STL': w_def, 'PER100_STL': w_def,
-        'BLK': w_def, 'PER36_BLK': w_def, 'PER100_BLK': w_def,
-        'FG3M': w_3p, 'PER36_FG3M': w_3p, 'FG3_PCT': w_3p,
-        'TS_PCT': w_ts, 'eFG_PCT': w_ts, 'FG_PCT': w_ts,
-        'PFD': w_pfd, 'FTM': w_pfd, 'PER36_FTM': w_pfd, 'PER100_PFD': w_pfd,
+        'STL': w_stl, 'PER36_STL': w_stl, 'PER100_STL': w_stl,
+        'BLK': w_blk, 'PER36_BLK': w_blk, 'PER100_BLK': w_blk,
+        'FG3M': w_fg3m, 'PER36_FG3M': w_fg3m, 'PER100_FG3M': w_fg3m,
+        'FTM': w_ftm, 'PER36_FTM': w_ftm, 'PER100_FTM': w_ftm,
+        'PFD': w_pfd, 'PER36_PFD': w_pfd, 'PER100_PFD': w_pfd,
+        'FG_PCT': w_fg_pct,
+        'FG3_PCT': w_fg3_pct,
+        'FT_PCT': w_ft_pct,
+        'eFG_PCT': w_efg_pct,
+        'TS_PCT': w_ts_pct,
         'PLUS_MINUS': w_pm,
+        'NBA_FANTASY_PTS': w_fantasy, 'PER36_NBA_FANTASY_PTS': w_fantasy, 'PER100_NBA_FANTASY_PTS': w_fantasy,
         'AGE': w_age
     }
 
@@ -311,7 +385,8 @@ if app_mode == "Vector Similarity Search":
         allow_same_player=allow_same_player,
         unique_players_only=unique_players_only,
         stat_filters=stat_filters_dict,
-        weights=weights
+        weights=weights,
+        metric=metric_mode
     )
 
     # Fetch updated target player row (with ACTIVE_* stat columns populated)

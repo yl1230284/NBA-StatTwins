@@ -147,6 +147,7 @@ class NBASimilarityEngine:
         merged['PER36_FG3M'] = (merged['FG3M'] / min_factor) * 36
         merged['PER36_FTM'] = (merged['FTM'] / min_factor) * 36
         merged['PER36_PFD'] = (merged['PFD'] / min_factor) * 36
+        merged['PER36_NBA_FANTASY_PTS'] = (merged['NBA_FANTASY_PTS'] / min_factor) * 36
 
         # Per 100 Possessions calculations using player-specific on-court PACE and total POSS
         if 'PACE' in merged.columns:
@@ -164,6 +165,7 @@ class NBASimilarityEngine:
         merged['PER100_FG3M'] = (merged['FG3M'] / min_factor) * 48 * (100 / pace_factor)
         merged['PER100_FTM'] = (merged['FTM'] / min_factor) * 48 * (100 / pace_factor)
         merged['PER100_PFD'] = (merged['PFD'] / min_factor) * 48 * (100 / pace_factor)
+        merged['PER100_NBA_FANTASY_PTS'] = (merged['NBA_FANTASY_PTS'] / min_factor) * 48 * (100 / pace_factor)
 
         self.df = merged.reset_index(drop=True)
         print(f"[Similarity Engine] Successfully loaded & prepared multi-season vector space for {len(self.df)} player-season profiles.")
@@ -187,14 +189,14 @@ class NBASimilarityEngine:
                 'PER36_PTS', 'PER36_REB', 'PER36_OREB', 'PER36_DREB', 'PER36_AST',
                 'PER36_STL', 'PER36_BLK', 'PER36_FG3M', 'PER36_FTM', 'PER36_PFD',
                 'FG_PCT', 'FG3_PCT', 'FT_PCT', 'eFG_PCT', 'TS_PCT', 'AST_TO_RATIO',
-                'PLUS_MINUS', 'AGE'
+                'PLUS_MINUS', 'PER36_NBA_FANTASY_PTS', 'AGE'
             ]
         elif stat_mode == "Per 100 Possessions":
             return [
                 'PER100_PTS', 'PER100_REB', 'PER100_OREB', 'PER100_DREB', 'PER100_AST',
                 'PER100_STL', 'PER100_BLK', 'PER100_FG3M', 'PER100_FTM', 'PER100_PFD',
                 'FG_PCT', 'FG3_PCT', 'FT_PCT', 'eFG_PCT', 'TS_PCT', 'AST_TO_RATIO',
-                'PLUS_MINUS', 'AGE'
+                'PLUS_MINUS', 'PER100_NBA_FANTASY_PTS', 'AGE'
             ]
         else: # Per Game
             return [
@@ -228,9 +230,11 @@ class NBASimilarityEngine:
                              min_pfd: Optional[float] = None, max_pfd: Optional[float] = None,
                              min_age: Optional[float] = None, max_age: Optional[float] = None,
                              stat_filters: Optional[Dict[str, Tuple[Optional[float], Optional[float]]]] = None,
-                             weights: Optional[Dict[str, float]] = None) -> pd.DataFrame:
+                             weights: Optional[Dict[str, float]] = None,
+                             metric: str = "euclidean") -> pd.DataFrame:
         """
-        Find top_n statistically similar player-seasons using Cosine Similarity over Z-score normalized vectors.
+        Find top_n statistically similar player-seasons using Weighted Euclidean or Cosine Similarity
+        over Z-score normalized vectors.
         Includes min/max range text constraints for all 18 NBA stats & salary.
         """
         if self.df.empty:
@@ -262,6 +266,7 @@ class NBASimilarityEngine:
             self.df['ACTIVE_FG3M'] = self.df['PER36_FG3M']
             self.df['ACTIVE_FTM'] = self.df['PER36_FTM']
             self.df['ACTIVE_PFD'] = self.df['PER36_PFD']
+            self.df['ACTIVE_NBA_FANTASY_PTS'] = self.df['PER36_NBA_FANTASY_PTS']
         elif stat_mode == "Per 100 Possessions":
             self.df['ACTIVE_PTS'] = self.df['PER100_PTS']
             self.df['ACTIVE_REB'] = self.df['PER100_REB']
@@ -273,6 +278,7 @@ class NBASimilarityEngine:
             self.df['ACTIVE_FG3M'] = self.df['PER100_FG3M']
             self.df['ACTIVE_FTM'] = self.df['PER100_FTM']
             self.df['ACTIVE_PFD'] = self.df['PER100_PFD']
+            self.df['ACTIVE_NBA_FANTASY_PTS'] = self.df['PER100_NBA_FANTASY_PTS']
         else: # Per Game
             self.df['ACTIVE_PTS'] = self.df['PTS']
             self.df['ACTIVE_REB'] = self.df['REB']
@@ -284,20 +290,48 @@ class NBASimilarityEngine:
             self.df['ACTIVE_FG3M'] = self.df['FG3M']
             self.df['ACTIVE_FTM'] = self.df['FTM']
             self.df['ACTIVE_PFD'] = self.df['PFD']
+            self.df['ACTIVE_NBA_FANTASY_PTS'] = self.df['NBA_FANTASY_PTS']
 
         # Extract & scale feature matrix
         X = self.df[feature_cols].copy().fillna(0).values
         scaler = StandardScaler()
         X_scaled = scaler.fit_transform(X)
 
-        # Apply custom weights if provided
-        if weights:
-            weight_vector = np.array([weights.get(col, 1.0) for col in feature_cols])
-            X_scaled = X_scaled * weight_vector
+        # Build weight vector
+        if weights is not None:
+            weight_vector = []
+            for col in feature_cols:
+                base_col = col.replace('PER36_', '').replace('PER100_', '')
+                w = weights.get(col, weights.get(base_col, 0.0))
+                weight_vector.append(float(w))
+            weight_vector = np.array(weight_vector, dtype=float)
+        else:
+            weight_vector = np.ones(len(feature_cols), dtype=float)
 
-        # Compute cosine similarity
-        target_vec = X_scaled[target_idx].reshape(1, -1)
-        sim_scores = cosine_similarity(target_vec, X_scaled)[0]
+        # Fallback if sum of weights is 0
+        if np.sum(weight_vector) <= 0:
+            weight_vector = np.ones(len(feature_cols), dtype=float)
+
+        target_vec = X_scaled[target_idx]
+
+        # Compute similarity scores based on selected metric
+        if metric == "cosine":
+            # Weighted Cosine Similarity
+            weight_norm = weight_vector / np.max(weight_vector) if np.max(weight_vector) > 0 else weight_vector
+            X_weighted = X_scaled * np.sqrt(weight_norm)
+            target_weighted = X_weighted[target_idx].reshape(1, -1)
+            sim_scores = cosine_similarity(target_weighted, X_weighted)[0]
+            sim_scores = np.clip(sim_scores, -1.0, 1.0)
+        else:
+            # Weighted Euclidean Distance (default):
+            # Normalizes weights so sum = 1 (weighted RMS difference in standard deviations)
+            norm_weights = weight_vector / np.sum(weight_vector)
+            diff = X_scaled - target_vec
+            weighted_sq_dist = np.sum(norm_weights * (diff ** 2), axis=1)
+            dist = np.sqrt(weighted_sq_dist)
+            # Smooth reciprocal mapping to [0, 1] range:
+            # dist = 0 -> 1.0 (100%), dist = 0.5 SD -> 0.8 (80%), dist = 1.0 SD -> 0.67 (66.7%), etc.
+            sim_scores = 1.0 / (1.0 + (dist / 2.0))
 
         # Filter candidates
         candidate_indices = list(range(len(self.df)))
@@ -398,6 +432,7 @@ class NBASimilarityEngine:
             results['ACTIVE_FG3M'] = results['PER36_FG3M']
             results['ACTIVE_FTM'] = results['PER36_FTM']
             results['ACTIVE_PFD'] = results['PER36_PFD']
+            results['ACTIVE_NBA_FANTASY_PTS'] = results['PER36_NBA_FANTASY_PTS']
         elif stat_mode == "Per 100 Possessions":
             results['ACTIVE_PTS'] = results['PER100_PTS']
             results['ACTIVE_REB'] = results['PER100_REB']
@@ -409,6 +444,7 @@ class NBASimilarityEngine:
             results['ACTIVE_FG3M'] = results['PER100_FG3M']
             results['ACTIVE_FTM'] = results['PER100_FTM']
             results['ACTIVE_PFD'] = results['PER100_PFD']
+            results['ACTIVE_NBA_FANTASY_PTS'] = results['PER100_NBA_FANTASY_PTS']
         else: # Per Game
             results['ACTIVE_PTS'] = results['PTS']
             results['ACTIVE_REB'] = results['REB']
@@ -420,6 +456,7 @@ class NBASimilarityEngine:
             results['ACTIVE_FG3M'] = results['FG3M']
             results['ACTIVE_FTM'] = results['FTM']
             results['ACTIVE_PFD'] = results['PFD']
+            results['ACTIVE_NBA_FANTASY_PTS'] = results['NBA_FANTASY_PTS']
 
         return results
 
