@@ -270,68 +270,176 @@ if app_mode == "Vector Similarity Search":
                 min_pfd = c_pfd1.number_input("Min Fouls Drawn (PFD)", value=None, min_value=0.0, max_value=12.0, step=0.1, placeholder="e.g. 2.0")
                 max_pfd = c_pfd2.number_input("Max Fouls Drawn (PFD)", value=None, min_value=0.0, max_value=12.0, step=0.1, placeholder="e.g. 8.0")
 
-        # EXPANDABLE ATTRIBUTE FOCUS WEIGHTS (All 19 Stats Individually Controllable)
-        with st.expander("Customize Attribute Focus Weights (All 19 Stats)"):
-            st.markdown("Adjust individual stat weights (0.0 to 2.0). Setting a weight to 0 completely removes it from similarity calculation.")
+        # EXPANDABLE ATTRIBUTE FOCUS WEIGHTS (Category Weights + Advanced Detailed Sliders)
+        with st.expander("Customize Attribute Focus Weights", expanded=False):
+            st.markdown("Select a **Category Focus Preset** or adjust the **Category Sliders** below to tune similarity matching without adjusting dozens of sliders. Advanced users can expand fine-tuned individual sliders.")
 
-            # Quick Preset Buttons
+            # Default Category State Values
+            default_cat_vals = {
+                'cat_scoring': 1.0,
+                'cat_playmaking': 1.0,
+                'cat_defense': 1.0,
+                'cat_rebound': 1.0,
+                'cat_impact': 1.0,
+                'cat_age': 0.5
+            }
+            for k, def_v in default_cat_vals.items():
+                if k not in st.session_state:
+                    st.session_state[k] = def_v
+
+            # Detailed individual stat keys
             weight_keys_all = [
                 'w_pts', 'w_fg3m', 'w_ftm', 'w_fg_pct', 'w_fg3_pct', 'w_ft_pct', 'w_efg_pct', 'w_ts_pct',
                 'w_ast', 'w_ast_to', 'w_stl', 'w_blk', 'w_pfd',
                 'w_reb', 'w_oreb', 'w_dreb', 'w_pm', 'w_fantasy', 'w_age'
             ]
-            for k in weight_keys_all:
-                if k not in st.session_state:
-                    st.session_state[k] = 0.5 if k == 'w_age' else 1.0
 
-            p_col1, p_col2, p_col3, p_col4 = st.columns(4)
-            if p_col1.button("Balanced (All 1.0)", use_container_width=True):
-                for k in weight_keys_all:
-                    st.session_state[k] = 0.5 if k == 'w_age' else 1.0
+            def apply_preset(c_pts, c_ast, c_def, c_reb, c_imp, c_age=0.5):
+                st.session_state['cat_scoring'] = float(c_pts)
+                st.session_state['cat_playmaking'] = float(c_ast)
+                st.session_state['cat_defense'] = float(c_def)
+                st.session_state['cat_rebound'] = float(c_reb)
+                st.session_state['cat_impact'] = float(c_imp)
+                st.session_state['cat_age'] = float(c_age)
+                # Synchronize detailed keys
+                for k in ['w_pts', 'w_fg3m', 'w_ftm', 'w_fg_pct', 'w_fg3_pct', 'w_ft_pct', 'w_efg_pct', 'w_ts_pct']:
+                    st.session_state[k] = float(c_pts)
+                for k in ['w_ast', 'w_ast_to']:
+                    st.session_state[k] = float(c_ast)
+                for k in ['w_stl', 'w_blk']:
+                    st.session_state[k] = float(c_def)
+                for k in ['w_reb', 'w_oreb', 'w_dreb']:
+                    st.session_state[k] = float(c_reb)
+                for k in ['w_pm', 'w_pfd', 'w_fantasy']:
+                    st.session_state[k] = float(c_imp)
+                st.session_state['w_age'] = float(c_age)
+
+            st.markdown("#### Focus Categories & Presets")
+            p_cols = st.columns(6)
+            if p_cols[0].button("Balanced", use_container_width=True, help="All categories weighted equally (1.0)"):
+                apply_preset(1.0, 1.0, 1.0, 1.0, 1.0, 0.5)
                 st.rerun()
-            if p_col2.button("Scoring Only (PTS=1)", use_container_width=True):
-                for k in weight_keys_all:
-                    st.session_state[k] = 1.0 if k == 'w_pts' else 0.0
+            if p_cols[1].button("Scoring", use_container_width=True, help="Scoring & shooting focus (PTS, 3PM, shooting efficiency)"):
+                apply_preset(1.5, 0.0, 0.0, 0.0, 0.0, 0.0)
                 st.rerun()
-            if p_col3.button("Playmaking Focus", use_container_width=True):
-                for k in weight_keys_all:
-                    st.session_state[k] = 1.0 if k in ['w_ast', 'w_ast_to'] else 0.0
+            if p_cols[2].button("Playmaking", use_container_width=True, help="Playmaking & ball control focus (AST, AST/TO)"):
+                apply_preset(0.5, 2.0, 0.0, 0.0, 0.0, 0.0)
                 st.rerun()
-            if p_col4.button("Zero All (0.0)", use_container_width=True):
-                for k in weight_keys_all:
-                    st.session_state[k] = 0.0
+            if p_cols[3].button("Defense", use_container_width=True, help="Defensive focus (STL, BLK, Def Rebounds)"):
+                apply_preset(0.0, 0.0, 2.0, 1.0, 0.5, 0.0)
+                st.rerun()
+            if p_cols[4].button("Rebounding", use_container_width=True, help="Rebounding focus (Total REB, OREB, DREB)"):
+                apply_preset(0.0, 0.0, 1.0, 2.0, 0.5, 0.0)
+                st.rerun()
+            if p_cols[5].button("Clear All", use_container_width=True, help="Set all categories to 0.0"):
+                apply_preset(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
                 st.rerun()
 
             st.write("")
+            st.markdown("#### Core Category Sliders")
+            cat_c1, cat_c2 = st.columns(2)
+            with cat_c1:
+                cat_scoring = st.slider("Scoring & Shooting (PTS, 3PM, FTM, FG%, 3P%, FT%, eFG%, TS%)", 0.0, 2.0, step=0.1, key="cat_scoring")
+                cat_playmaking = st.slider("Playmaking (AST, AST/TO Ratio)", 0.0, 2.0, step=0.1, key="cat_playmaking")
+                cat_defense = st.slider("Defense (STL, BLK)", 0.0, 2.0, step=0.1, key="cat_defense")
+            with cat_c2:
+                cat_rebound = st.slider("Rebounding (Total REB, Off OREB, Def DREB)", 0.0, 2.0, step=0.1, key="cat_rebound")
+                cat_impact = st.slider("Net Impact & Fantasy (+/-, Fouls Drawn PFD, Fantasy PTS)", 0.0, 2.0, step=0.1, key="cat_impact")
+                cat_age = st.slider("Player Age", 0.0, 2.0, step=0.1, key="cat_age")
 
-            col_w1, col_w2, col_w3 = st.columns(3)
-            with col_w1:
-                st.markdown("#### Scoring & Shooting")
-                w_pts = st.slider("Scoring (PTS)", 0.0, 2.0, step=0.1, key="w_pts")
-                w_fg3m = st.slider("3-Pointers Made (3PM)", 0.0, 2.0, step=0.1, key="w_fg3m")
-                w_ftm = st.slider("Free Throws Made (FTM)", 0.0, 2.0, step=0.1, key="w_ftm")
-                w_fg_pct = st.slider("Field Goal % (FG%)", 0.0, 2.0, step=0.1, key="w_fg_pct")
-                w_fg3_pct = st.slider("3-Point % (3P%)", 0.0, 2.0, step=0.1, key="w_fg3_pct")
-                w_ft_pct = st.slider("Free Throw % (FT%)", 0.0, 2.0, step=0.1, key="w_ft_pct")
-                w_efg_pct = st.slider("Effective FG % (eFG%)", 0.0, 2.0, step=0.1, key="w_efg_pct")
-                w_ts_pct = st.slider("True Shooting % (TS%)", 0.0, 2.0, step=0.1, key="w_ts_pct")
+            # Active categories badge feedback
+            active_cats = []
+            if cat_scoring > 0: active_cats.append(f"Scoring ({cat_scoring:.1f})")
+            if cat_playmaking > 0: active_cats.append(f"Playmaking ({cat_playmaking:.1f})")
+            if cat_defense > 0: active_cats.append(f"Defense ({cat_defense:.1f})")
+            if cat_rebound > 0: active_cats.append(f"Rebounds ({cat_rebound:.1f})")
+            if cat_impact > 0: active_cats.append(f"Impact ({cat_impact:.1f})")
+            if cat_age > 0: active_cats.append(f"Age ({cat_age:.1f})")
 
-            with col_w2:
-                st.markdown("#### Playmaking & Defense")
-                w_ast = st.slider("Playmaking (AST)", 0.0, 2.0, step=0.1, key="w_ast")
-                w_ast_to = st.slider("Assist-to-Turnover (AST/TO)", 0.0, 2.0, step=0.1, key="w_ast_to")
-                w_stl = st.slider("Steals (STL)", 0.0, 2.0, step=0.1, key="w_stl")
-                w_blk = st.slider("Blocks (BLK)", 0.0, 2.0, step=0.1, key="w_blk")
-                w_pfd = st.slider("Fouls Drawn (PFD)", 0.0, 2.0, step=0.1, key="w_pfd")
+            if active_cats:
+                st.caption("Active Categories: " + " • ".join(active_cats))
+            else:
+                st.caption("⚠️ All category weights are 0.0. Engine will use equal weighting fallback.")
 
-            with col_w3:
-                st.markdown("#### Rebounds, Impact & Bio")
-                w_reb = st.slider("Total Rebounds (REB)", 0.0, 2.0, step=0.1, key="w_reb")
-                w_oreb = st.slider("Offensive Rebounding (OREB)", 0.0, 2.0, step=0.1, key="w_oreb")
-                w_dreb = st.slider("Defensive Rebounding (DREB)", 0.0, 2.0, step=0.1, key="w_dreb")
-                w_pm = st.slider("Net Impact (+/-)", 0.0, 2.0, step=0.1, key="w_pm")
-                w_fantasy = st.slider("NBA Fantasy Points", 0.0, 2.0, step=0.1, key="w_fantasy")
-                w_age = st.slider("Player Age", 0.0, 2.0, step=0.1, key="w_age")
+            # Optional detailed fine-tuning expander
+            use_detailed = st.checkbox(
+                "Fine-Tune Individual Stats (Expand All 19 Detailed Sliders)",
+                value=st.session_state.get('use_detailed_weights', False),
+                key='use_detailed_weights',
+                help="Check this box if you want to override category weights with individual stat sliders."
+            )
+
+            if use_detailed:
+                st.info("Individual stat weights below are active and overriding category-level weights.")
+                # Ensure all detailed keys are initialized
+                for k in weight_keys_all:
+                    if k not in st.session_state:
+                        if k in ['w_pts', 'w_fg3m', 'w_ftm', 'w_fg_pct', 'w_fg3_pct', 'w_ft_pct', 'w_efg_pct', 'w_ts_pct']:
+                            st.session_state[k] = cat_scoring
+                        elif k in ['w_ast', 'w_ast_to']:
+                            st.session_state[k] = cat_playmaking
+                        elif k in ['w_stl', 'w_blk']:
+                            st.session_state[k] = cat_defense
+                        elif k in ['w_reb', 'w_oreb', 'w_dreb']:
+                            st.session_state[k] = cat_rebound
+                        elif k in ['w_pm', 'w_pfd', 'w_fantasy']:
+                            st.session_state[k] = cat_impact
+                        elif k == 'w_age':
+                            st.session_state[k] = cat_age
+
+                col_w1, col_w2, col_w3 = st.columns(3)
+                with col_w1:
+                    st.markdown("##### Scoring & Shooting")
+                    w_pts = st.slider("Points (PTS)", 0.0, 2.0, step=0.1, key="w_pts")
+                    w_fg3m = st.slider("3-Pointers Made (3PM)", 0.0, 2.0, step=0.1, key="w_fg3m")
+                    w_ftm = st.slider("Free Throws Made (FTM)", 0.0, 2.0, step=0.1, key="w_ftm")
+                    w_fg_pct = st.slider("Field Goal % (FG%)", 0.0, 2.0, step=0.1, key="w_fg_pct")
+                    w_fg3_pct = st.slider("3-Point % (3P%)", 0.0, 2.0, step=0.1, key="w_fg3_pct")
+                    w_ft_pct = st.slider("Free Throw % (FT%)", 0.0, 2.0, step=0.1, key="w_ft_pct")
+                    w_efg_pct = st.slider("Effective FG % (eFG%)", 0.0, 2.0, step=0.1, key="w_efg_pct")
+                    w_ts_pct = st.slider("True Shooting % (TS%)", 0.0, 2.0, step=0.1, key="w_ts_pct")
+
+                with col_w2:
+                    st.markdown("##### Playmaking & Defense")
+                    w_ast = st.slider("Assists (AST)", 0.0, 2.0, step=0.1, key="w_ast")
+                    w_ast_to = st.slider("Assist-to-Turnover (AST/TO)", 0.0, 2.0, step=0.1, key="w_ast_to")
+                    w_stl = st.slider("Steals (STL)", 0.0, 2.0, step=0.1, key="w_stl")
+                    w_blk = st.slider("Blocks (BLK)", 0.0, 2.0, step=0.1, key="w_blk")
+                    w_pfd = st.slider("Fouls Drawn (PFD)", 0.0, 2.0, step=0.1, key="w_pfd")
+
+                with col_w3:
+                    st.markdown("##### Rebounds, Impact & Bio")
+                    w_reb = st.slider("Total Rebounds (REB)", 0.0, 2.0, step=0.1, key="w_reb")
+                    w_oreb = st.slider("Offensive Rebounding (OREB)", 0.0, 2.0, step=0.1, key="w_oreb")
+                    w_dreb = st.slider("Defensive Rebounding (DREB)", 0.0, 2.0, step=0.1, key="w_dreb")
+                    w_pm = st.slider("Net Plus-Minus (+/-)", 0.0, 2.0, step=0.1, key="w_pm")
+                    w_fantasy = st.slider("NBA Fantasy Points", 0.0, 2.0, step=0.1, key="w_fantasy")
+                    w_age = st.slider("Age", 0.0, 2.0, step=0.1, key="w_age")
+            else:
+                w_pts = cat_scoring
+                w_fg3m = cat_scoring
+                w_ftm = cat_scoring
+                w_fg_pct = cat_scoring
+                w_fg3_pct = cat_scoring
+                w_ft_pct = cat_scoring
+                w_efg_pct = cat_scoring
+                w_ts_pct = cat_scoring
+
+                w_ast = cat_playmaking
+                w_ast_to = cat_playmaking
+
+                w_stl = cat_defense
+                w_blk = cat_defense
+
+                w_reb = cat_rebound
+                w_oreb = cat_rebound
+                w_dreb = cat_rebound
+
+                w_pm = cat_impact
+                w_pfd = cat_impact
+                w_fantasy = cat_impact
+
+                w_age = cat_age
 
     weights = {
         'PTS': w_pts, 'PER36_PTS': w_pts, 'PER100_PTS': w_pts,
