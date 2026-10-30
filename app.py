@@ -9,6 +9,7 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from similarity_engine import NBASimilarityEngine, normalize_player_name
+from update_season_stats import get_sync_metadata, update_season
 
 st.set_page_config(
     page_title="NBA Player Vector Similarity & Comparison Tool",
@@ -93,6 +94,39 @@ selected_attributes = st.sidebar.multiselect(
     options=ALL_CARD_ATTRIBUTES,
     default=["Points (PTS)", "Total Rebounds (REB)", "Assists (AST)", "True Shooting (TS%)", "Assist-to-Turnover (AST/TO)", "Salary"]
 )
+
+st.sidebar.markdown("---")
+with st.sidebar.container(border=True):
+    sync_meta = get_sync_metadata()
+    sync_status = sync_meta.get("status", "SUCCESS")
+    status_label = "Active" if sync_status == "SUCCESS" else "Offline"
+    last_sync = sync_meta.get("last_sync_formatted", "Recently")
+    players_tracked = sync_meta.get("records_count", 0)
+
+    st.markdown(f"""
+    <div style="margin-bottom: 8px;">
+        <div style="font-size: 0.95rem; font-weight: 700; color: #10B981; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px;">
+            2026-27 Live Stat Sync
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid #374151; font-size: 0.85rem;">
+            <span style="color: #9CA3AF;">Roster Status:</span>
+            <span style="background: rgba(16, 185, 129, 0.18); color: #10B981; padding: 2px 8px; border-radius: 4px; font-weight: 600;">{status_label} ({players_tracked} players)</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 0.82rem;">
+            <span style="color: #9CA3AF;">Last Synced:</span>
+            <span style="color: #F3F4F6; font-weight: 500;">{last_sync}</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    if st.button("Refresh 2026-27 Stats Now", use_container_width=True, help="Fetches updated ongoing box score stats from the NBA Stats API without resetting historical data."):
+        with st.spinner("Fetching latest 2026-27 player statistics from NBA API..."):
+            sync_result = update_season(season="2026-27", verbose=False)
+            if sync_result.get("success"):
+                st.success(f"Refreshed {sync_result.get('records', 0)} players!")
+                st.rerun()
+            else:
+                st.error(f"{sync_result.get('message', 'Sync failed')}")
 
 st.sidebar.markdown("---")
 st.sidebar.info("Vector Tip: Set Max Salary in the candidate filter section to discover bargain replacement targets.")

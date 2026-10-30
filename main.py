@@ -113,6 +113,19 @@ if __name__ == "__main__":
     parser.add_argument("--seasons", nargs="+", default=DEFAULT_SEASONS, help="List of NBA Seasons (e.g., 2022-23 2023-24 2024-25)")
     parser.add_argument("--format", type=str, default="all", choices=["csv", "json", "sqlite", "all"],
                         help="Export format for extracted data")
+    parser.add_argument("--sync-live", action="store_true",
+                        help="Perform fast incremental update for the ongoing 2026-27 season without re-scraping past years")
+    parser.add_argument("--check-sync", action="store_true",
+                        help="Display sync status and timestamp for ongoing season without fetching")
 
     args = parser.parse_args()
-    run_pipeline(sources=args.sources, seasons=args.seasons, export_format=args.format)
+
+    if args.check_sync:
+        from update_season_stats import get_sync_metadata
+        meta = get_sync_metadata()
+        print(f"Season: {meta.get('season')} | Status: {meta.get('status')} | Refreshed: {meta.get('last_sync_formatted')} | Players: {meta.get('records_count')}")
+    elif args.sync_live:
+        from update_season_stats import update_season
+        update_season(season="2026-27")
+    else:
+        run_pipeline(sources=args.sources, seasons=args.seasons, export_format=args.format)
