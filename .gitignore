@@ -27,6 +27,21 @@ ENV/
 env/
 .venv/
 
+# Environment variables & secrets protection
+.env
+.env.*
+*.env
+*.token
+*.key
+*.pem
+*.cert
+*.pfx
+secrets.toml
+.streamlit/secrets.toml
+credentials.json
+client_secret*.json
+service-account*.json
+
 # IDE & OS
 .idea/
 .vscode/
