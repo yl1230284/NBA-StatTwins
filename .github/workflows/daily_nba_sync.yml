@@ -1,0 +1,68 @@
+name: Daily NBA Stats Sync
+
+on:
+  schedule:
+    # Runs daily at 09:00 UTC (4:00 AM EST / 1:00 AM PST) after all games conclude
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    inputs:
+      season:
+        description: 'NBA Season to update'
+        required: true
+        default: '2026-27'
+      with_salaries:
+        description: 'Also refresh ESPN player salaries'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Incremental NBA Stats Sync
+        run: |
+          TARGET_SEASON="${{ github.event.inputs.season || '2026-27' }}"
+          WITH_SALARIES="${{ github.event.inputs.with_salaries == 'true' && '--with-salaries' || '' }}"
+          echo "Syncing NBA stats for season: $TARGET_SEASON $WITH_SALARIES"
+          python update_season_stats.py --season "$TARGET_SEASON" $WITH_SALARIES
+
+      - name: Verify Sync Status
+        run: |
+          python update_season_stats.py --check
+
+      - name: Commit & Push Updated Dataset
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Stage updated database and output data files
+          git add output/
+          
+          # Only commit if changes were detected
+          if git diff --staged --quiet; then
+            echo "No stats changed. Dataset is already up to date."
+          else
+            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "Automated Sync: Update 2026-27 NBA stats ($TIMESTAMP) [skip ci]"
+            git push origin main
+          fi
