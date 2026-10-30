@@ -170,10 +170,13 @@ class NBASimilarityEngine:
         self.df = merged.reset_index(drop=True)
         print(f"[Similarity Engine] Successfully loaded & prepared multi-season vector space for {len(self.df)} player-season profiles.")
 
-    def get_player_list(self) -> List[str]:
-        """Get sorted list of all available player-season names (DISPLAY_NAME_SEASON)."""
+    def get_player_list(self, season: Optional[str] = None) -> List[str]:
+        """Get sorted list of all available player-season names (DISPLAY_NAME_SEASON), optionally filtered by season."""
         if self.df.empty or 'DISPLAY_NAME_SEASON' not in self.df.columns:
             return []
+        if season and season not in ["All Seasons", "All"]:
+            sub = self.df[self.df['SEASON'] == season]
+            return sorted(sub['DISPLAY_NAME_SEASON'].dropna().unique().tolist())
         return sorted(self.df['DISPLAY_NAME_SEASON'].dropna().unique().tolist())
 
     def get_season_list(self) -> List[str]:
@@ -229,6 +232,7 @@ class NBASimilarityEngine:
                              min_plus_minus: Optional[float] = None, max_plus_minus: Optional[float] = None,
                              min_pfd: Optional[float] = None, max_pfd: Optional[float] = None,
                              min_age: Optional[float] = None, max_age: Optional[float] = None,
+                             min_gp: Optional[float] = None, max_gp: Optional[float] = None,
                              stat_filters: Optional[Dict[str, Tuple[Optional[float], Optional[float]]]] = None,
                              weights: Optional[Dict[str, float]] = None,
                              metric: str = "euclidean") -> pd.DataFrame:
@@ -351,6 +355,7 @@ class NBASimilarityEngine:
         kwarg_map = {
             'salary': (min_salary, max_salary),
             'AGE': (min_age, max_age),
+            'GP': (min_gp, max_gp),
             'PTS': (min_pts, max_pts),
             'REB': (min_reb, max_reb),
             'OREB': (min_oreb, max_oreb),

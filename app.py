@@ -82,7 +82,7 @@ similarity_metric = st.sidebar.selectbox(
 metric_mode = "euclidean" if "Euclidean" in similarity_metric else "cosine"
 
 ALL_CARD_ATTRIBUTES = [
-    "Points (PTS)", "Total Rebounds (REB)", "Offensive Rebounds (OREB)", "Defensive Rebounds (DREB)",
+    "Games Played (GP)", "Points (PTS)", "Total Rebounds (REB)", "Offensive Rebounds (OREB)", "Defensive Rebounds (DREB)",
     "Assists (AST)", "Steals (STL)", "Blocks (BLK)", "3-Pointers (3PM)", "Free Throws (FTM)",
     "Field Goal % (FG%)", "3-Point % (3P%)", "Free Throw % (FT%)", "True Shooting (TS%)", "Effective FG (eFG%)",
     "Assist-to-Turnover (AST/TO)", "Fouls Drawn (PFD)", "Net Plus-Minus (+/-)",
@@ -202,6 +202,8 @@ def format_card_stats(row, selected_attrs):
         stat_parts.append(f"**PFD**: {float(pfd_val):.1f}")
     if "Net Plus-Minus (+/-)" in selected_attrs:
         stat_parts.append(f"**+/-**: {float(row.get('PLUS_MINUS', 0)):+.1f}")
+    if "Games Played (GP)" in selected_attrs:
+        stat_parts.append(f"**GP**: {int(row.get('GP', 0))}")
     if "Fantasy Points (Fantasy PTS)" in selected_attrs:
         stat_parts.append(f"**FPTS**: {float(fpts_val):.1f}")
     if "Age" in selected_attrs:
@@ -217,18 +219,31 @@ if app_mode == "Vector Similarity Search":
 
     top_col1, top_col2 = st.columns([1, 1])
     with top_col1:
-        default_name = "Luka Dončić (2023-24)"
-        default_idx = player_season_list.index(default_name) if default_name in player_season_list else 0
-        target_player_season = st.selectbox("Select Target Player-Season", player_season_list, index=default_idx)
-        
-        season_filter_opts = ["All Seasons"] + seasons_available
-        season_filter = st.selectbox("Filter Matches By Season", season_filter_opts, index=0)
+        target_season_opts = ["All Seasons", "2026-27 (Current Ongoing)"] + [s for s in seasons_available if s != "2026-27"]
+        target_season_sel = st.selectbox("Browse Players by Season", target_season_opts, index=0, help="Filter the player list below by season to easily find players of the desired season.")
+        sel_s = "2026-27" if "2026-27" in target_season_sel else (None if target_season_sel == "All Seasons" else target_season_sel)
+        try:
+            filtered_player_list = engine.get_player_list(season=sel_s)
+        except TypeError:
+            filtered_player_list = engine.get_player_list()
+
+        default_name = "Luka Dončić (2026-27)" if "Luka Dončić (2026-27)" in filtered_player_list else ("Luka Dončić (2023-24)" if "Luka Dončić (2023-24)" in filtered_player_list else (filtered_player_list[0] if filtered_player_list else ""))
+        default_idx = filtered_player_list.index(default_name) if default_name in filtered_player_list else 0
+        target_player_season = st.selectbox("Select a Player-Season Profile", filtered_player_list, index=default_idx)
         
         top_n = st.slider("Number of Similar Players", min_value=3, max_value=15, value=5)
 
         # EXPANDABLE HARD RANGE FILTERS (Min / Max Textboxes for All Stats)
         with st.expander("Filter Candidate Criteria (Min / Max Textboxes for All Stats)"):
-            st.markdown("Set exact minimum and maximum stat boundaries to filter candidate matches.")
+            st.markdown("Set exact minimum and maximum stat boundaries or season filters to narrow candidate matches.")
+
+            season_filter_opts = ["All Seasons"] + seasons_available
+            season_filter = st.selectbox(
+                "Filter Matches By Season",
+                season_filter_opts,
+                index=0,
+                help="Filter by candidate players from a specific season (or All Seasons)."
+            )
 
             f_cols1, f_cols2 = st.columns(2)
             with f_cols1:
@@ -240,6 +255,10 @@ if app_mode == "Vector Similarity Search":
                     c_a1, c_a2 = st.columns(2)
                     min_age = c_a1.number_input("Min Age", value=None, min_value=18, max_value=45, step=1, placeholder="e.g. 19")
                     max_age = c_a2.number_input("Max Age", value=None, min_value=18, max_value=45, step=1, placeholder="e.g. 35")
+
+                    c_gp1, c_gp2 = st.columns(2)
+                    min_gp = c_gp1.number_input("Min Games Played (GP)", value=None, min_value=1, max_value=82, step=1, placeholder="e.g. 5")
+                    max_gp = c_gp2.number_input("Max Games Played (GP)", value=None, min_value=1, max_value=82, step=1, placeholder="e.g. 82")
 
                 with st.expander("Box Score Stats", expanded=False):
                     c_pts1, c_pts2 = st.columns(2)
@@ -505,6 +524,7 @@ if app_mode == "Vector Similarity Search":
     stat_filters_dict = {
         'salary': (min_sal, max_sal),
         'AGE': (min_age, max_age),
+        'GP': (min_gp, max_gp),
         'PTS': (min_pts, max_pts),
         'REB': (min_reb, max_reb),
         'OREB': (min_oreb, max_oreb),
@@ -583,7 +603,9 @@ if app_mode == "Vector Similarity Search":
                         st.markdown("Player")
                 with c_col2:
                     p_title = row.get('DISPLAY_NAME_SEASON', row.get('PLAYER_NAME'))
-                    st.markdown(f"### {p_title} (`{row.get('TEAM_ABBREVIATION', '')}`)")
+                    is_live = row.get('SEASON') == '2026-27'
+                    live_tag = "<span style='background-color: #10B981; color: white; padding: 2px 7px; border-radius: 4px; font-weight: 600; font-size: 0.75rem; margin-left: 6px;'>Live 2026-27</span>" if is_live else ""
+                    st.markdown(f"### {p_title} (`{row.get('TEAM_ABBREVIATION', '')}`) {live_tag}", unsafe_allow_html=True)
                     card_summary = format_card_stats(row, selected_attrs=selected_attributes)
                     st.write(card_summary if card_summary else "*(No attributes checked in sidebar checklist)*")
                 with c_col3:
@@ -606,11 +628,25 @@ elif app_mode == "Head-to-Head Comparison":
 
     col1, col2 = st.columns(2)
     with col1:
-        p1_default = player_season_list.index("Nikola Jokić (2024-25)") if "Nikola Jokić (2024-25)" in player_season_list else 0
-        player1 = st.selectbox("Select Player-Season 1", player_season_list, index=p1_default)
+        s1_opts = ["All Seasons", "2026-27 (Current Ongoing)"] + [s for s in seasons_available if s != "2026-27"]
+        s1_sel = st.selectbox("Browse Player 1 by Season", s1_opts, index=0, key="h2h_s1_filter", help="Filter the player list below by season to easily find players of the desired season.")
+        s1_val = "2026-27" if "2026-27" in s1_sel else (None if s1_sel == "All Seasons" else s1_sel)
+        try:
+            p1_list = engine.get_player_list(season=s1_val)
+        except TypeError:
+            p1_list = engine.get_player_list()
+        p1_default = p1_list.index("Nikola Jokić (2024-25)") if "Nikola Jokić (2024-25)" in p1_list else 0
+        player1 = st.selectbox("Select Player-Season 1", p1_list, index=p1_default)
     with col2:
-        p2_default = player_season_list.index("Giannis Antetokounmpo (2024-25)") if "Giannis Antetokounmpo (2024-25)" in player_season_list else min(1, len(player_season_list)-1)
-        player2 = st.selectbox("Select Player-Season 2", player_season_list, index=p2_default)
+        s2_opts = ["All Seasons", "2026-27 (Current Ongoing)"] + [s for s in seasons_available if s != "2026-27"]
+        s2_sel = st.selectbox("Browse Player 2 by Season", s2_opts, index=0, key="h2h_s2_filter", help="Filter the player list below by season to easily find players of the desired season.")
+        s2_val = "2026-27" if "2026-27" in s2_sel else (None if s2_sel == "All Seasons" else s2_sel)
+        try:
+            p2_list = engine.get_player_list(season=s2_val)
+        except TypeError:
+            p2_list = engine.get_player_list()
+        p2_default = p2_list.index("Giannis Antetokounmpo (2024-25)") if "Giannis Antetokounmpo (2024-25)" in p2_list else (min(1, len(p2_list)-1) if len(p2_list) > 1 else 0)
+        player2 = st.selectbox("Select Player-Season 2", p2_list, index=p2_default)
 
     p1_match = engine.df[engine.df['norm_display_season'] == normalize_player_name(player1)]
     p2_match = engine.df[engine.df['norm_display_season'] == normalize_player_name(player2)]
@@ -665,7 +701,14 @@ elif app_mode == "Salary vs. Production Matrix":
     st.subheader("Salary vs. Box Score Production Analytics")
     st.markdown("Identify bargain contracts and top-value player performances across the league.")
 
+    m_season_opts = ["All Seasons", "2026-27 (Current Ongoing)"] + [s for s in seasons_available if s != "2026-27"]
+    matrix_season = st.selectbox("Filter Matrix by Season", m_season_opts, index=0, help="Isolate the ongoing 2026-27 season to view active bargain performers, or analyze across all multi-season data.")
+
     plot_df = engine.df.dropna(subset=['salary', 'PTS']).copy()
+    if matrix_season != "All Seasons":
+        sel_s = "2026-27" if "2026-27" in matrix_season else matrix_season
+        plot_df = plot_df[plot_df['SEASON'] == sel_s]
+
     plot_df['Salary_Millions'] = plot_df['salary'] / 1e6
     plot_df = plot_df[plot_df['Salary_Millions'] > 0]
 
