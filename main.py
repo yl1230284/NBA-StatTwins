@@ -17,7 +17,7 @@ from scrapers.realgm import RealGMScraper
 from scrapers.historical_salaries import HistoricalSalaryScraper
 from utils.exporter import DataExporter
 
-DEFAULT_SEASONS = ["2022-23", "2023-24", "2024-25"]
+DEFAULT_SEASONS = ["2022-23", "2023-24", "2024-25", "2025-26", "2026-27"]
 
 def run_pipeline(sources: list, seasons: list = DEFAULT_SEASONS, export_format: str = "all"):
     exporter = DataExporter()
@@ -69,7 +69,7 @@ def run_pipeline(sources: list, seasons: list = DEFAULT_SEASONS, export_format: 
                 exporter.export_sqlite(stats_df, "nba_season_stats")
 
         # Active players index for latest season
-        latest_season = seasons[-1] if seasons else "2024-25"
+        latest_season = seasons[-1] if seasons else "2026-27"
         active_df = nba.get_active_players(season=latest_season)
         if not active_df.empty:
             if export_format in ["csv", "all"]:

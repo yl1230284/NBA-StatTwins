@@ -24,6 +24,12 @@
     "salary":15161800.0
   },
   {
+    "espn_id":"4278039",
+    "PLAYER_NAME":"Nickeil Alexander-Walker",
+    "SEASON":"2026-27",
+    "salary":14403710.0
+  },
+  {
     "espn_id":"4869342",
     "PLAYER_NAME":"Dyson Daniels",
     "SEASON":"2022-23",
@@ -46,6 +52,12 @@
     "PLAYER_NAME":"Dyson Daniels",
     "SEASON":"2025-26",
     "salary":7707709.0
+  },
+  {
+    "espn_id":"4869342",
+    "PLAYER_NAME":"Dyson Daniels",
+    "SEASON":"2026-27",
+    "salary":25000000.0
   },
   {
     "espn_id":"4397020",
@@ -72,6 +84,12 @@
     "salary":18222222.0
   },
   {
+    "espn_id":"4397020",
+    "PLAYER_NAME":"Luguentz Dort",
+    "SEASON":"2026-27",
+    "salary":18222222.0
+  },
+  {
     "espn_id":"4712863",
     "PLAYER_NAME":"Mouhamed Gueye",
     "SEASON":"2023-24",
@@ -88,6 +106,12 @@
     "PLAYER_NAME":"Mouhamed Gueye",
     "SEASON":"2025-26",
     "salary":2221677.0
+  },
+  {
+    "espn_id":"4712863",
+    "PLAYER_NAME":"Mouhamed Gueye",
+    "SEASON":"2026-27",
+    "salary":2406205.0
   },
   {
     "espn_id":"2990984",
@@ -114,6 +138,12 @@
     "salary":9219512.0
   },
   {
+    "espn_id":"2990984",
+    "PLAYER_NAME":"Buddy Hield",
+    "SEASON":"2026-27",
+    "salary":9658536.0
+  },
+  {
     "espn_id":"4701230",
     "PLAYER_NAME":"Jalen Johnson",
     "SEASON":"2022-23",
@@ -138,6 +168,12 @@
     "salary":30000000.0
   },
   {
+    "espn_id":"4701230",
+    "PLAYER_NAME":"Jalen Johnson",
+    "SEASON":"2026-27",
+    "salary":30000000.0
+  },
+  {
     "espn_id":"4280151",
     "PLAYER_NAME":"Corey Kispert",
     "SEASON":"2022-23",
@@ -159,6 +195,12 @@
     "espn_id":"4280151",
     "PLAYER_NAME":"Corey Kispert",
     "SEASON":"2025-26",
+    "salary":13975000.0
+  },
+  {
+    "espn_id":"4280151",
+    "PLAYER_NAME":"Corey Kispert",
+    "SEASON":"2026-27",
     "salary":13975000.0
   },
   {
@@ -210,6 +252,12 @@
     "salary":30666666.0
   },
   {
+    "espn_id":"2490149",
+    "PLAYER_NAME":"CJ McCollum",
+    "SEASON":"2026-27",
+    "salary":21000000.0
+  },
+  {
     "espn_id":"4433629",
     "PLAYER_NAME":"Ryan Nembhard",
     "SEASON":"2025-26",
@@ -220,6 +268,12 @@
     "PLAYER_NAME":"Asa Newell",
     "SEASON":"2025-26",
     "salary":3237480.0
+  },
+  {
+    "espn_id":"4873201",
+    "PLAYER_NAME":"Asa Newell",
+    "SEASON":"2026-27",
+    "salary":3399480.0
   },
   {
     "espn_id":"4431680",
@@ -246,6 +300,12 @@
     "salary":15000000.0
   },
   {
+    "espn_id":"4431680",
+    "PLAYER_NAME":"Onyeka Okongwu",
+    "SEASON":"2026-27",
+    "salary":16120000.0
+  },
+  {
     "espn_id":"4397183",
     "PLAYER_NAME":"Aaron Wiggins",
     "SEASON":"2022-23",
@@ -268,6 +328,12 @@
     "PLAYER_NAME":"Aaron Wiggins",
     "SEASON":"2025-26",
     "salary":10102802.0
+  },
+  {
+    "espn_id":"4397183",
+    "PLAYER_NAME":"Aaron Wiggins",
+    "SEASON":"2026-27",
+    "salary":9224300.0
   },
   {
     "espn_id":"4431714",
@@ -330,6 +396,12 @@
     "salary":2461463.0
   },
   {
+    "espn_id":"4277951",
+    "PLAYER_NAME":"Luka Garza",
+    "SEASON":"2026-27",
+    "salary":2801346.0
+  },
+  {
     "espn_id":"4251",
     "PLAYER_NAME":"Paul George",
     "SEASON":"2022-23",
@@ -354,10 +426,28 @@
     "salary":51666090.0
   },
   {
+    "espn_id":"4251",
+    "PLAYER_NAME":"Paul George",
+    "SEASON":"2026-27",
+    "salary":54126380.0
+  },
+  {
     "espn_id":"5175647",
     "PLAYER_NAME":"Hugo Gonzalez",
     "SEASON":"2025-26",
     "salary":2783880.0
+  },
+  {
+    "espn_id":"5175647",
+    "PLAYER_NAME":"Hugo Gonzalez",
+    "SEASON":"2026-27",
+    "salary":2923560.0
+  },
+  {
+    "espn_id":"4397251",
+    "PLAYER_NAME":"Ron Harper Jr.",
+    "SEASON":"2026-27",
+    "salary":2538126.0
   },
   {
     "espn_id":"4065804",
@@ -384,6 +474,12 @@
     "salary":10044643.0
   },
   {
+    "espn_id":"4065804",
+    "PLAYER_NAME":"Sam Hauser",
+    "SEASON":"2026-27",
+    "salary":10848241.0
+  },
+  {
     "espn_id":"4066354",
     "PLAYER_NAME":"Payton Pritchard",
     "SEASON":"2022-23",
@@ -408,6 +504,12 @@
     "salary":7232143.0
   },
   {
+    "espn_id":"4066354",
+    "PLAYER_NAME":"Payton Pritchard",
+    "SEASON":"2026-27",
+    "salary":7767857.0
+  },
+  {
     "espn_id":"4397424",
     "PLAYER_NAME":"Neemias Queta",
     "SEASON":"2024-25",
@@ -418,6 +520,12 @@
     "PLAYER_NAME":"Neemias Queta",
     "SEASON":"2025-26",
     "salary":2349578.0
+  },
+  {
+    "espn_id":"4397424",
+    "PLAYER_NAME":"Neemias Queta",
+    "SEASON":"2026-27",
+    "salary":2667944.0
   },
   {
     "espn_id":"4351852",
@@ -456,6 +564,12 @@
     "salary":2619000.0
   },
   {
+    "espn_id":"4593841",
+    "PLAYER_NAME":"Baylor Scheierman",
+    "SEASON":"2026-27",
+    "salary":2744040.0
+  },
+  {
     "espn_id":"4065648",
     "PLAYER_NAME":"Jayson Tatum",
     "SEASON":"2022-23",
@@ -480,6 +594,12 @@
     "salary":54126450.0
   },
   {
+    "espn_id":"4065648",
+    "PLAYER_NAME":"Jayson Tatum",
+    "SEASON":"2026-27",
+    "salary":58456566.0
+  },
+  {
     "espn_id":"4683689",
     "PLAYER_NAME":"Jordan Walsh",
     "SEASON":"2023-24",
@@ -496,6 +616,12 @@
     "PLAYER_NAME":"Jordan Walsh",
     "SEASON":"2025-26",
     "salary":2221677.0
+  },
+  {
+    "espn_id":"4683689",
+    "PLAYER_NAME":"Jordan Walsh",
+    "SEASON":"2026-27",
+    "salary":2406205.0
   },
   {
     "espn_id":"3078576",
@@ -522,6 +648,12 @@
     "salary":28100001.0
   },
   {
+    "espn_id":"3078576",
+    "PLAYER_NAME":"Derrick White",
+    "SEASON":"2026-27",
+    "salary":30348001.0
+  },
+  {
     "espn_id":"4702745",
     "PLAYER_NAME":"Amari Williams",
     "SEASON":"2025-26",
@@ -546,10 +678,22 @@
     "salary":3398640.0
   },
   {
+    "espn_id":"4712896",
+    "PLAYER_NAME":"Noah Clowney",
+    "SEASON":"2026-27",
+    "salary":5414034.0
+  },
+  {
     "espn_id":"5175643",
     "PLAYER_NAME":"Egor Demin",
     "SEASON":"2025-26",
     "salary":6889200.0
+  },
+  {
+    "espn_id":"5175643",
+    "PLAYER_NAME":"Egor Demin",
+    "SEASON":"2026-27",
+    "salary":7233720.0
   },
   {
     "espn_id":"4702177",
@@ -606,6 +750,12 @@
     "salary":15500000.0
   },
   {
+    "espn_id":"3907823",
+    "PLAYER_NAME":"Terance Mann",
+    "SEASON":"2026-27",
+    "salary":15500000.0
+  },
+  {
     "espn_id":"4687718",
     "PLAYER_NAME":"Josh Minott",
     "SEASON":"2022-23",
@@ -628,6 +778,12 @@
     "PLAYER_NAME":"Josh Minott",
     "SEASON":"2025-26",
     "salary":2378870.0
+  },
+  {
+    "espn_id":"4687718",
+    "PLAYER_NAME":"Josh Minott",
+    "SEASON":"2026-27",
+    "salary":2584539.0
   },
   {
     "espn_id":"4278104",
@@ -654,10 +810,22 @@
     "salary":38333050.0
   },
   {
+    "espn_id":"4278104",
+    "PLAYER_NAME":"Michael Porter Jr.",
+    "SEASON":"2026-27",
+    "salary":40906150.0
+  },
+  {
     "espn_id":"5037873",
     "PLAYER_NAME":"Drake Powell",
     "SEASON":"2025-26",
     "salary":3372240.0
+  },
+  {
+    "espn_id":"5037873",
+    "PLAYER_NAME":"Drake Powell",
+    "SEASON":"2026-27",
+    "salary":3540600.0
   },
   {
     "espn_id":"3064514",
@@ -684,10 +852,22 @@
     "salary":30864198.0
   },
   {
+    "espn_id":"3064514",
+    "PLAYER_NAME":"Julius Randle",
+    "SEASON":"2026-27",
+    "salary":33333333.0
+  },
+  {
     "espn_id":"5242502",
     "PLAYER_NAME":"Ben Saraf",
     "SEASON":"2025-26",
     "salary":2884560.0
+  },
+  {
+    "espn_id":"5242502",
+    "PLAYER_NAME":"Ben Saraf",
+    "SEASON":"2026-27",
+    "salary":3028560.0
   },
   {
     "espn_id":"4432194",
@@ -714,10 +894,22 @@
     "salary":6250000.0
   },
   {
+    "espn_id":"4432194",
+    "PLAYER_NAME":"Day'Ron Sharpe",
+    "SEASON":"2026-27",
+    "salary":6250000.0
+  },
+  {
     "espn_id":"5279130",
     "PLAYER_NAME":"Nolan Traore",
     "SEASON":"2025-26",
     "salary":3811560.0
+  },
+  {
+    "espn_id":"5279130",
+    "PLAYER_NAME":"Nolan Traore",
+    "SEASON":"2026-27",
+    "salary":4002000.0
   },
   {
     "espn_id":"3150844",
@@ -750,6 +942,12 @@
     "salary":2801280.0
   },
   {
+    "espn_id":"5107173",
+    "PLAYER_NAME":"Danny Wolf",
+    "SEASON":"2026-27",
+    "salary":2941440.0
+  },
+  {
     "espn_id":"3135045",
     "PLAYER_NAME":"Grayson Allen",
     "SEASON":"2022-23",
@@ -772,6 +970,12 @@
     "PLAYER_NAME":"Grayson Allen",
     "SEASON":"2025-26",
     "salary":16875000.0
+  },
+  {
+    "espn_id":"3135045",
+    "PLAYER_NAME":"Grayson Allen",
+    "SEASON":"2026-27",
+    "salary":18125000.0
   },
   {
     "espn_id":"2578239",
@@ -798,6 +1002,12 @@
     "salary":1315814.0
   },
   {
+    "espn_id":"2578239",
+    "PLAYER_NAME":"Pat Connaughton",
+    "SEASON":"2026-27",
+    "salary":3815861.0
+  },
+  {
     "espn_id":"4433249",
     "PLAYER_NAME":"Moussa Diabate",
     "SEASON":"2024-25",
@@ -808,6 +1018,12 @@
     "PLAYER_NAME":"Moussa Diabate",
     "SEASON":"2025-26",
     "salary":2270735.0
+  },
+  {
+    "espn_id":"4433249",
+    "PLAYER_NAME":"Moussa Diabate",
+    "SEASON":"2026-27",
+    "salary":2461462.0
   },
   {
     "espn_id":"2578185",
@@ -834,10 +1050,22 @@
     "salary":12700000.0
   },
   {
+    "espn_id":"2578185",
+    "PLAYER_NAME":"Dorian Finney-Smith",
+    "SEASON":"2026-27",
+    "salary":13335000.0
+  },
+  {
     "espn_id":"4602025",
     "PLAYER_NAME":"Sion James",
     "SEASON":"2025-26",
     "salary":2296274.0
+  },
+  {
+    "espn_id":"4602025",
+    "PLAYER_NAME":"Sion James",
+    "SEASON":"2026-27",
+    "salary":2411090.0
   },
   {
     "espn_id":"4576060",
@@ -846,16 +1074,34 @@
     "salary":2296274.0
   },
   {
+    "espn_id":"4576060",
+    "PLAYER_NAME":"Ryan Kalkbrenner",
+    "SEASON":"2026-27",
+    "salary":2411090.0
+  },
+  {
     "espn_id":"5061575",
     "PLAYER_NAME":"Kon Knueppel",
     "SEASON":"2025-26",
     "salary":10015680.0
   },
   {
+    "espn_id":"5061575",
+    "PLAYER_NAME":"Kon Knueppel",
+    "SEASON":"2026-27",
+    "salary":10516560.0
+  },
+  {
     "espn_id":"5239590",
     "PLAYER_NAME":"Liam McNeeley",
     "SEASON":"2025-26",
     "salary":2763960.0
+  },
+  {
+    "espn_id":"5239590",
+    "PLAYER_NAME":"Liam McNeeley",
+    "SEASON":"2026-27",
+    "salary":2902080.0
   },
   {
     "espn_id":"4433287",
@@ -874,6 +1120,12 @@
     "PLAYER_NAME":"Brandon Miller",
     "SEASON":"2025-26",
     "salary":11968800.0
+  },
+  {
+    "espn_id":"4433287",
+    "PLAYER_NAME":"Brandon Miller",
+    "SEASON":"2026-27",
+    "salary":15104625.0
   },
   {
     "espn_id":"2583632",
@@ -900,6 +1152,12 @@
     "salary":10125000.0
   },
   {
+    "espn_id":"2583632",
+    "PLAYER_NAME":"Royce O'Neale",
+    "SEASON":"2026-27",
+    "salary":11375000.0
+  },
+  {
     "espn_id":"4396971",
     "PLAYER_NAME":"Naz Reid",
     "SEASON":"2022-23",
@@ -924,6 +1182,12 @@
     "salary":21551724.0
   },
   {
+    "espn_id":"4396971",
+    "PLAYER_NAME":"Naz Reid",
+    "SEASON":"2026-27",
+    "salary":23275862.0
+  },
+  {
     "espn_id":"5211176",
     "PLAYER_NAME":"Tidjane Salaun",
     "SEASON":"2024-25",
@@ -934,6 +1198,12 @@
     "PLAYER_NAME":"Tidjane Salaun",
     "SEASON":"2025-26",
     "salary":7863240.0
+  },
+  {
+    "espn_id":"5211176",
+    "PLAYER_NAME":"Tidjane Salaun",
+    "SEASON":"2026-27",
+    "salary":8237880.0
   },
   {
     "espn_id":"3032979",
@@ -958,6 +1228,12 @@
     "PLAYER_NAME":"Dennis Schroder",
     "SEASON":"2025-26",
     "salary":14104000.0
+  },
+  {
+    "espn_id":"3032979",
+    "PLAYER_NAME":"Dennis Schroder",
+    "SEASON":"2026-27",
+    "salary":14809200.0
   },
   {
     "espn_id":"4395651",
@@ -1008,6 +1284,12 @@
     "salary":13645500.0
   },
   {
+    "espn_id":"4066218",
+    "PLAYER_NAME":"Grant Williams",
+    "SEASON":"2026-27",
+    "salary":14265750.0
+  },
+  {
     "espn_id":"4711294",
     "PLAYER_NAME":"Matas Buzelis",
     "SEASON":"2024-25",
@@ -1018,6 +1300,12 @@
     "PLAYER_NAME":"Matas Buzelis",
     "SEASON":"2025-26",
     "salary":5455560.0
+  },
+  {
+    "espn_id":"4711294",
+    "PLAYER_NAME":"Matas Buzelis",
+    "SEASON":"2026-27",
+    "salary":5715360.0
   },
   {
     "espn_id":"4278067",
@@ -1042,6 +1330,12 @@
     "PLAYER_NAME":"Nic Claxton",
     "SEASON":"2025-26",
     "salary":25352272.0
+  },
+  {
+    "espn_id":"4278067",
+    "PLAYER_NAME":"Nic Claxton",
+    "SEASON":"2026-27",
+    "salary":23147727.0
   },
   {
     "espn_id":"4066650",
@@ -1080,10 +1374,22 @@
     "salary":6576120.0
   },
   {
+    "espn_id":"4684275",
+    "PLAYER_NAME":"Rob Dillingham",
+    "SEASON":"2026-27",
+    "salary":6889320.0
+  },
+  {
     "espn_id":"5242496",
     "PLAYER_NAME":"Noa Essengue",
     "SEASON":"2025-26",
     "salary":5429520.0
+  },
+  {
+    "espn_id":"5242496",
+    "PLAYER_NAME":"Noa Essengue",
+    "SEASON":"2026-27",
+    "salary":5701200.0
   },
   {
     "espn_id":"4871145",
@@ -1107,6 +1413,12 @@
     "espn_id":"4871145",
     "PLAYER_NAME":"Josh Giddey",
     "SEASON":"2025-26",
+    "salary":25000000.0
+  },
+  {
+    "espn_id":"4871145",
+    "PLAYER_NAME":"Josh Giddey",
+    "SEASON":"2026-27",
     "salary":25000000.0
   },
   {
@@ -1134,6 +1446,12 @@
     "salary":8000000.0
   },
   {
+    "espn_id":"4395626",
+    "PLAYER_NAME":"Tre Jones",
+    "SEASON":"2026-27",
+    "salary":8000000.0
+  },
+  {
     "espn_id":"5044385",
     "PLAYER_NAME":"Leonard Miller",
     "SEASON":"2023-24",
@@ -1150,6 +1468,12 @@
     "PLAYER_NAME":"Leonard Miller",
     "SEASON":"2025-26",
     "salary":2221677.0
+  },
+  {
+    "espn_id":"5044385",
+    "PLAYER_NAME":"Leonard Miller",
+    "SEASON":"2026-27",
+    "salary":2406205.0
   },
   {
     "espn_id":"4432822",
@@ -1174,6 +1498,12 @@
     "PLAYER_NAME":"Isaac Okoro",
     "SEASON":"2025-26",
     "salary":11000000.0
+  },
+  {
+    "espn_id":"4432822",
+    "PLAYER_NAME":"Isaac Okoro",
+    "SEASON":"2026-27",
+    "salary":11814815.0
   },
   {
     "espn_id":"2595516",
@@ -1224,6 +1554,12 @@
     "salary":9000000.0
   },
   {
+    "espn_id":"4397189",
+    "PLAYER_NAME":"Jalen Smith",
+    "SEASON":"2026-27",
+    "salary":9428571.0
+  },
+  {
     "espn_id":"4431687",
     "PLAYER_NAME":"Patrick Williams",
     "SEASON":"2022-23",
@@ -1245,6 +1581,12 @@
     "espn_id":"4431687",
     "PLAYER_NAME":"Patrick Williams",
     "SEASON":"2025-26",
+    "salary":18000000.0
+  },
+  {
+    "espn_id":"4431687",
+    "PLAYER_NAME":"Patrick Williams",
+    "SEASON":"2026-27",
     "salary":18000000.0
   },
   {
@@ -1282,6 +1624,12 @@
     "PLAYER_NAME":"Jarrett Allen",
     "SEASON":"2025-26",
     "salary":20000000.0
+  },
+  {
+    "espn_id":"4066328",
+    "PLAYER_NAME":"Jarrett Allen",
+    "SEASON":"2026-27",
+    "salary":28000000.0
   },
   {
     "espn_id":"3934723",
@@ -1332,6 +1680,12 @@
     "salary":39446090.0
   },
   {
+    "espn_id":"3992",
+    "PLAYER_NAME":"James Harden",
+    "SEASON":"2026-27",
+    "salary":42317308.0
+  },
+  {
     "espn_id":"4066757",
     "PLAYER_NAME":"Sam Merrill",
     "SEASON":"2022-23",
@@ -1354,6 +1708,12 @@
     "PLAYER_NAME":"Sam Merrill",
     "SEASON":"2025-26",
     "salary":8482143.0
+  },
+  {
+    "espn_id":"4066757",
+    "PLAYER_NAME":"Sam Merrill",
+    "SEASON":"2026-27",
+    "salary":9160714.0
   },
   {
     "espn_id":"3908809",
@@ -1380,6 +1740,12 @@
     "salary":46394100.0
   },
   {
+    "espn_id":"3908809",
+    "PLAYER_NAME":"Donovan Mitchell",
+    "SEASON":"2026-27",
+    "salary":50105628.0
+  },
+  {
     "espn_id":"4432158",
     "PLAYER_NAME":"Evan Mobley",
     "SEASON":"2022-23",
@@ -1404,6 +1770,12 @@
     "salary":46394100.0
   },
   {
+    "espn_id":"4432158",
+    "PLAYER_NAME":"Evan Mobley",
+    "SEASON":"2026-27",
+    "salary":50105628.0
+  },
+  {
     "espn_id":"4701233",
     "PLAYER_NAME":"Craig Porter Jr.",
     "SEASON":"2023-24",
@@ -1422,16 +1794,34 @@
     "salary":2221677.0
   },
   {
+    "espn_id":"4701233",
+    "PLAYER_NAME":"Craig Porter Jr.",
+    "SEASON":"2026-27",
+    "salary":2406205.0
+  },
+  {
     "espn_id":"5023693",
     "PLAYER_NAME":"Tyrese Proctor",
     "SEASON":"2025-26",
     "salary":1272870.0
   },
   {
+    "espn_id":"5023693",
+    "PLAYER_NAME":"Tyrese Proctor",
+    "SEASON":"2026-27",
+    "salary":2150917.0
+  },
+  {
     "espn_id":"5106268",
     "PLAYER_NAME":"Nae'Qwan Tomlin",
     "SEASON":"2025-26",
     "salary":718150.0
+  },
+  {
+    "espn_id":"5106268",
+    "PLAYER_NAME":"Nae'Qwan Tomlin",
+    "SEASON":"2026-27",
+    "salary":2411090.0
   },
   {
     "espn_id":"4683747",
@@ -1444,6 +1834,12 @@
     "PLAYER_NAME":"Jaylon Tyson",
     "SEASON":"2025-26",
     "salary":3492480.0
+  },
+  {
+    "espn_id":"4683747",
+    "PLAYER_NAME":"Jaylon Tyson",
+    "SEASON":"2026-27",
+    "salary":3658560.0
   },
   {
     "espn_id":"4576087",
@@ -1494,6 +1890,12 @@
     "salary":18485916.0
   },
   {
+    "espn_id":"4593125",
+    "PLAYER_NAME":"Santi Aldama",
+    "SEASON":"2026-27",
+    "salary":17007043.0
+  },
+  {
     "espn_id":"4432582",
     "PLAYER_NAME":"Max Christie",
     "SEASON":"2022-23",
@@ -1518,10 +1920,22 @@
     "salary":7714286.0
   },
   {
+    "espn_id":"4432582",
+    "PLAYER_NAME":"Max Christie",
+    "SEASON":"2026-27",
+    "salary":8285714.0
+  },
+  {
     "espn_id":"5041939",
     "PLAYER_NAME":"Cooper Flagg",
     "SEASON":"2025-26",
     "salary":14386320.0
+  },
+  {
+    "espn_id":"5041939",
+    "PLAYER_NAME":"Cooper Flagg",
+    "SEASON":"2026-27",
+    "salary":14517480.0
   },
   {
     "espn_id":"4278049",
@@ -1546,6 +1960,12 @@
     "PLAYER_NAME":"Daniel Gafford",
     "SEASON":"2025-26",
     "salary":14386320.0
+  },
+  {
+    "espn_id":"4278049",
+    "PLAYER_NAME":"Daniel Gafford",
+    "SEASON":"2026-27",
+    "salary":17263584.0
   },
   {
     "espn_id":"5105806",
@@ -1590,6 +2010,12 @@
     "salary":36566002.0
   },
   {
+    "espn_id":"6442",
+    "PLAYER_NAME":"Kyrie Irving",
+    "SEASON":"2026-27",
+    "salary":39416562.0
+  },
+  {
     "espn_id":"4683688",
     "PLAYER_NAME":"Dereck Lively II",
     "SEASON":"2023-24",
@@ -1606,6 +2032,12 @@
     "PLAYER_NAME":"Dereck Lively II",
     "SEASON":"2025-26",
     "salary":5253360.0
+  },
+  {
+    "espn_id":"4683688",
+    "PLAYER_NAME":"Dereck Lively II",
+    "SEASON":"2026-27",
+    "salary":7239130.0
   },
   {
     "espn_id":"4278594",
@@ -1632,6 +2064,12 @@
     "salary":9000000.0
   },
   {
+    "espn_id":"4278594",
+    "PLAYER_NAME":"Naji Marshall",
+    "SEASON":"2026-27",
+    "salary":9428571.0
+  },
+  {
     "espn_id":"3138160",
     "PLAYER_NAME":"Caleb Martin",
     "SEASON":"2022-23",
@@ -1656,6 +2094,12 @@
     "salary":9594044.0
   },
   {
+    "espn_id":"3138160",
+    "PLAYER_NAME":"Caleb Martin",
+    "SEASON":"2026-27",
+    "salary":10001494.0
+  },
+  {
     "espn_id":"5211175",
     "PLAYER_NAME":"Zaccharie Risacher",
     "SEASON":"2024-25",
@@ -1666,6 +2110,12 @@
     "PLAYER_NAME":"Zaccharie Risacher",
     "SEASON":"2025-26",
     "salary":13197720.0
+  },
+  {
+    "espn_id":"5211175",
+    "PLAYER_NAME":"Zaccharie Risacher",
+    "SEASON":"2026-27",
+    "salary":13826040.0
   },
   {
     "espn_id":"4432107",
@@ -1684,6 +2134,12 @@
     "PLAYER_NAME":"Marcus Sasser",
     "SEASON":"2025-26",
     "salary":2886720.0
+  },
+  {
+    "espn_id":"4432107",
+    "PLAYER_NAME":"Marcus Sasser",
+    "SEASON":"2026-27",
+    "salary":5198983.0
   },
   {
     "espn_id":"4278078",
@@ -1708,6 +2164,12 @@
     "PLAYER_NAME":"P.J. Washington",
     "SEASON":"2025-26",
     "salary":14152174.0
+  },
+  {
+    "espn_id":"4278078",
+    "PLAYER_NAME":"P.J. Washington",
+    "SEASON":"2026-27",
+    "salary":19813044.0
   },
   {
     "espn_id":"4277848",
@@ -1758,6 +2220,12 @@
     "salary":4921797.0
   },
   {
+    "espn_id":"4431767",
+    "PLAYER_NAME":"Christian Braun",
+    "SEASON":"2026-27",
+    "salary":21551774.0
+  },
+  {
     "espn_id":"3978",
     "PLAYER_NAME":"DeMar DeRozan",
     "SEASON":"2022-23",
@@ -1780,6 +2248,12 @@
     "PLAYER_NAME":"DeMar DeRozan",
     "SEASON":"2025-26",
     "salary":24570000.0
+  },
+  {
+    "espn_id":"3978",
+    "PLAYER_NAME":"DeMar DeRozan",
+    "SEASON":"2026-27",
+    "salary":25740000.0
   },
   {
     "espn_id":"3064290",
@@ -1806,6 +2280,12 @@
     "salary":22841455.0
   },
   {
+    "espn_id":"3064290",
+    "PLAYER_NAME":"Aaron Gordon",
+    "SEASON":"2026-27",
+    "salary":33658037.0
+  },
+  {
     "espn_id":"4433607",
     "PLAYER_NAME":"DaRon Holmes II",
     "SEASON":"2024-25",
@@ -1816,6 +2296,12 @@
     "PLAYER_NAME":"DaRon Holmes II",
     "SEASON":"2025-26",
     "salary":3218760.0
+  },
+  {
+    "espn_id":"4433607",
+    "PLAYER_NAME":"DaRon Holmes II",
+    "SEASON":"2026-27",
+    "salary":3372120.0
   },
   {
     "espn_id":"3138196",
@@ -1842,6 +2328,12 @@
     "salary":21057065.0
   },
   {
+    "espn_id":"3138196",
+    "PLAYER_NAME":"Cameron Johnson",
+    "SEASON":"2026-27",
+    "salary":23062500.0
+  },
+  {
     "espn_id":"3112335",
     "PLAYER_NAME":"Nikola Jokic",
     "SEASON":"2022-23",
@@ -1864,6 +2356,12 @@
     "PLAYER_NAME":"Nikola Jokic",
     "SEASON":"2025-26",
     "salary":55224526.0
+  },
+  {
+    "espn_id":"3112335",
+    "PLAYER_NAME":"Nikola Jokic",
+    "SEASON":"2026-27",
+    "salary":59033114.0
   },
   {
     "espn_id":"4592427",
@@ -1920,6 +2418,12 @@
     "salary":46394100.0
   },
   {
+    "espn_id":"3936299",
+    "PLAYER_NAME":"Jamal Murray",
+    "SEASON":"2026-27",
+    "salary":50105628.0
+  },
+  {
     "espn_id":"4431690",
     "PLAYER_NAME":"Zeke Nnaji",
     "SEASON":"2022-23",
@@ -1942,6 +2446,12 @@
     "PLAYER_NAME":"Zeke Nnaji",
     "SEASON":"2025-26",
     "salary":8177778.0
+  },
+  {
+    "espn_id":"4431690",
+    "PLAYER_NAME":"Zeke Nnaji",
+    "SEASON":"2026-27",
+    "salary":7466667.0
   },
   {
     "espn_id":"4593041",
@@ -1978,6 +2488,12 @@
     "PLAYER_NAME":"Julian Strawther",
     "SEASON":"2025-26",
     "salary":2674200.0
+  },
+  {
+    "espn_id":"4432181",
+    "PLAYER_NAME":"Julian Strawther",
+    "SEASON":"2026-27",
+    "salary":4826931.0
   },
   {
     "espn_id":"4277890",
@@ -2046,6 +2562,12 @@
     "salary":46394100.0
   },
   {
+    "espn_id":"4432166",
+    "PLAYER_NAME":"Cade Cunningham",
+    "SEASON":"2026-27",
+    "salary":50105628.0
+  },
+  {
     "espn_id":"4433621",
     "PLAYER_NAME":"Jalen Duren",
     "SEASON":"2022-23",
@@ -2112,6 +2634,12 @@
     "salary":3634153.0
   },
   {
+    "espn_id":"2999547",
+    "PLAYER_NAME":"Gary Harris",
+    "SEASON":"2026-27",
+    "salary":3815861.0
+  },
+  {
     "espn_id":"4683771",
     "PLAYER_NAME":"Ronald Holland II",
     "SEASON":"2024-25",
@@ -2122,6 +2650,12 @@
     "PLAYER_NAME":"Ronald Holland II",
     "SEASON":"2025-26",
     "salary":8657280.0
+  },
+  {
+    "espn_id":"4683771",
+    "PLAYER_NAME":"Ronald Holland II",
+    "SEASON":"2026-27",
+    "salary":9069600.0
   },
   {
     "espn_id":"4066372",
@@ -2154,6 +2688,12 @@
     "salary":3809524.0
   },
   {
+    "espn_id":"5107199",
+    "PLAYER_NAME":"Daniss Jenkins",
+    "SEASON":"2026-27",
+    "salary":4000000.0
+  },
+  {
     "espn_id":"4395702",
     "PLAYER_NAME":"Isaiah Joe",
     "SEASON":"2022-23",
@@ -2178,6 +2718,12 @@
     "salary":12362338.0
   },
   {
+    "espn_id":"4395702",
+    "PLAYER_NAME":"Isaiah Joe",
+    "SEASON":"2026-27",
+    "salary":11323006.0
+  },
+  {
     "espn_id":"5107818",
     "PLAYER_NAME":"Isaac Jones",
     "SEASON":"2024-25",
@@ -2194,6 +2740,12 @@
     "PLAYER_NAME":"Chaz Lanier",
     "SEASON":"2025-26",
     "salary":1372870.0
+  },
+  {
+    "espn_id":"4700852",
+    "PLAYER_NAME":"Chaz Lanier",
+    "SEASON":"2026-27",
+    "salary":2150917.0
   },
   {
     "espn_id":"4592187",
@@ -2238,6 +2790,12 @@
     "salary":3303774.0
   },
   {
+    "espn_id":"2990962",
+    "PLAYER_NAME":"Taurean Prince",
+    "SEASON":"2026-27",
+    "salary":3815861.0
+  },
+  {
     "espn_id":"4278562",
     "PLAYER_NAME":"Paul Reed",
     "SEASON":"2022-23",
@@ -2260,6 +2818,12 @@
     "PLAYER_NAME":"Paul Reed",
     "SEASON":"2025-26",
     "salary":5335894.0
+  },
+  {
+    "espn_id":"4278562",
+    "PLAYER_NAME":"Paul Reed",
+    "SEASON":"2026-27",
+    "salary":5000000.0
   },
   {
     "espn_id":"3157465",
@@ -2286,6 +2850,18 @@
     "salary":16834692.0
   },
   {
+    "espn_id":"3157465",
+    "PLAYER_NAME":"Duncan Robinson",
+    "SEASON":"2026-27",
+    "salary":15992957.0
+  },
+  {
+    "espn_id":"4397882",
+    "PLAYER_NAME":"Tolu Smith",
+    "SEASON":"2026-27",
+    "salary":2411090.0
+  },
+  {
     "espn_id":"4684742",
     "PLAYER_NAME":"Ausar Thompson",
     "SEASON":"2023-24",
@@ -2302,6 +2878,12 @@
     "PLAYER_NAME":"Ausar Thompson",
     "SEASON":"2025-26",
     "salary":8775000.0
+  },
+  {
+    "espn_id":"4684742",
+    "PLAYER_NAME":"Ausar Thompson",
+    "SEASON":"2026-27",
+    "salary":11117925.0
   },
   {
     "espn_id":"4397886",
@@ -2346,6 +2928,12 @@
     "salary":54126450.0
   },
   {
+    "espn_id":"6430",
+    "PLAYER_NAME":"Jimmy Butler III",
+    "SEASON":"2026-27",
+    "salary":56832773.0
+  },
+  {
     "espn_id":"3975",
     "PLAYER_NAME":"Stephen Curry",
     "SEASON":"2022-23",
@@ -2368,6 +2956,12 @@
     "PLAYER_NAME":"Stephen Curry",
     "SEASON":"2025-26",
     "salary":59606817.0
+  },
+  {
+    "espn_id":"3975",
+    "PLAYER_NAME":"Stephen Curry",
+    "SEASON":"2026-27",
+    "salary":62587158.0
   },
   {
     "espn_id":"6589",
@@ -2394,6 +2988,12 @@
     "salary":25892857.0
   },
   {
+    "espn_id":"6589",
+    "PLAYER_NAME":"Draymond Green",
+    "SEASON":"2026-27",
+    "salary":27678571.0
+  },
+  {
     "espn_id":"3213",
     "PLAYER_NAME":"Al Horford",
     "SEASON":"2022-23",
@@ -2416,6 +3016,12 @@
     "PLAYER_NAME":"Al Horford",
     "SEASON":"2025-26",
     "salary":5685000.0
+  },
+  {
+    "espn_id":"3213",
+    "PLAYER_NAME":"Al Horford",
+    "SEASON":"2026-27",
+    "salary":5969250.0
   },
   {
     "espn_id":"4066436",
@@ -2464,6 +3070,12 @@
     "PLAYER_NAME":"Moses Moody",
     "SEASON":"2025-26",
     "salary":11574074.0
+  },
+  {
+    "espn_id":"4432171",
+    "PLAYER_NAME":"Moses Moody",
+    "SEASON":"2026-27",
+    "salary":12500000.0
   },
   {
     "espn_id":"2990969",
@@ -2532,6 +3144,12 @@
     "salary":3687960.0
   },
   {
+    "espn_id":"4709138",
+    "PLAYER_NAME":"Brandin Podziemski",
+    "SEASON":"2026-27",
+    "salary":5679458.0
+  },
+  {
     "espn_id":"3102531",
     "PLAYER_NAME":"Kristaps Porzingis",
     "SEASON":"2022-23",
@@ -2562,6 +3180,12 @@
     "salary":1272870.0
   },
   {
+    "espn_id":"4897262",
+    "PLAYER_NAME":"Will Richard",
+    "SEASON":"2026-27",
+    "salary":2150917.0
+  },
+  {
     "espn_id":"4997536",
     "PLAYER_NAME":"Gui Santos",
     "SEASON":"2023-24",
@@ -2578,6 +3202,12 @@
     "PLAYER_NAME":"Gui Santos",
     "SEASON":"2025-26",
     "salary":2221677.0
+  },
+  {
+    "espn_id":"4997536",
+    "PLAYER_NAME":"Gui Santos",
+    "SEASON":"2026-27",
+    "salary":4629630.0
   },
   {
     "espn_id":"4397821",
@@ -2616,6 +3246,12 @@
     "salary":14130434.0
   },
   {
+    "espn_id":"2991235",
+    "PLAYER_NAME":"Steven Adams",
+    "SEASON":"2026-27",
+    "salary":13000000.0
+  },
+  {
     "espn_id":"3037789",
     "PLAYER_NAME":"Bogdan Bogdanovic",
     "SEASON":"2022-23",
@@ -2637,6 +3273,12 @@
     "espn_id":"3037789",
     "PLAYER_NAME":"Bogdan Bogdanovic",
     "SEASON":"2025-26",
+    "salary":16020000.0
+  },
+  {
+    "espn_id":"3037789",
+    "PLAYER_NAME":"Bogdan Bogdanovic",
+    "SEASON":"2026-27",
     "salary":16020000.0
   },
   {
@@ -2664,6 +3306,12 @@
     "salary":6700000.0
   },
   {
+    "espn_id":"3102529",
+    "PLAYER_NAME":"Clint Capela",
+    "SEASON":"2026-27",
+    "salary":7035000.0
+  },
+  {
     "espn_id":"3202",
     "PLAYER_NAME":"Kevin Durant",
     "SEASON":"2022-23",
@@ -2686,6 +3334,12 @@
     "PLAYER_NAME":"Kevin Durant",
     "SEASON":"2025-26",
     "salary":54708609.0
+  },
+  {
+    "espn_id":"3202",
+    "PLAYER_NAME":"Kevin Durant",
+    "SEASON":"2026-27",
+    "salary":43902439.0
   },
   {
     "espn_id":"4433192",
@@ -2736,6 +3390,12 @@
     "salary":33944954.0
   },
   {
+    "espn_id":"4871144",
+    "PLAYER_NAME":"Alperen Sengun",
+    "SEASON":"2026-27",
+    "salary":35642202.0
+  },
+  {
     "espn_id":"4711272",
     "PLAYER_NAME":"Reed Sheppard",
     "SEASON":"2024-25",
@@ -2746,6 +3406,12 @@
     "PLAYER_NAME":"Reed Sheppard",
     "SEASON":"2025-26",
     "salary":10603560.0
+  },
+  {
+    "espn_id":"4711272",
+    "PLAYER_NAME":"Reed Sheppard",
+    "SEASON":"2026-27",
+    "salary":11108880.0
   },
   {
     "espn_id":"2990992",
@@ -2772,6 +3438,12 @@
     "salary":5134000.0
   },
   {
+    "espn_id":"2990992",
+    "PLAYER_NAME":"Marcus Smart",
+    "SEASON":"2026-27",
+    "salary":5390700.0
+  },
+  {
     "espn_id":"4432639",
     "PLAYER_NAME":"Jabari Smith Jr.",
     "SEASON":"2022-23",
@@ -2794,6 +3466,12 @@
     "PLAYER_NAME":"Jabari Smith Jr.",
     "SEASON":"2025-26",
     "salary":12350392.0
+  },
+  {
+    "espn_id":"4432639",
+    "PLAYER_NAME":"Jabari Smith Jr.",
+    "SEASON":"2026-27",
+    "salary":23643411.0
   },
   {
     "espn_id":"3136777",
@@ -2838,6 +3516,12 @@
     "salary":9690600.0
   },
   {
+    "espn_id":"4684740",
+    "PLAYER_NAME":"Amen Thompson",
+    "SEASON":"2026-27",
+    "salary":12258609.0
+  },
+  {
     "espn_id":"2991230",
     "PLAYER_NAME":"Fred VanVleet",
     "SEASON":"2022-23",
@@ -2859,6 +3543,12 @@
     "espn_id":"2991230",
     "PLAYER_NAME":"Fred VanVleet",
     "SEASON":"2025-26",
+    "salary":25000000.0
+  },
+  {
+    "espn_id":"2991230",
+    "PLAYER_NAME":"Fred VanVleet",
+    "SEASON":"2026-27",
     "salary":25000000.0
   },
   {
@@ -2892,6 +3582,12 @@
     "salary":1955377.0
   },
   {
+    "espn_id":"5157066",
+    "PLAYER_NAME":"Johnny Furphy",
+    "SEASON":"2026-27",
+    "salary":2296271.0
+  },
+  {
     "espn_id":"4396993",
     "PLAYER_NAME":"Tyrese Haliburton",
     "SEASON":"2022-23",
@@ -2916,6 +3612,12 @@
     "salary":45550512.0
   },
   {
+    "espn_id":"4396993",
+    "PLAYER_NAME":"Tyrese Haliburton",
+    "SEASON":"2026-27",
+    "salary":48924624.0
+  },
+  {
     "espn_id":"4065731",
     "PLAYER_NAME":"Jay Huff",
     "SEASON":"2024-25",
@@ -2928,10 +3630,22 @@
     "salary":2349578.0
   },
   {
+    "espn_id":"4065731",
+    "PLAYER_NAME":"Jay Huff",
+    "SEASON":"2026-27",
+    "salary":2667944.0
+  },
+  {
     "espn_id":"4592829",
     "PLAYER_NAME":"Quenton Jackson",
     "SEASON":"2025-26",
     "salary":601553.0
+  },
+  {
+    "espn_id":"4592829",
+    "PLAYER_NAME":"Quenton Jackson",
+    "SEASON":"2026-27",
+    "salary":2584539.0
   },
   {
     "espn_id":"2530530",
@@ -2956,6 +3670,12 @@
     "PLAYER_NAME":"T.J. McConnell",
     "SEASON":"2025-26",
     "salary":10200000.0
+  },
+  {
+    "espn_id":"2530530",
+    "PLAYER_NAME":"T.J. McConnell",
+    "SEASON":"2026-27",
+    "salary":11000000.0
   },
   {
     "espn_id":"2580365",
@@ -3006,6 +3726,12 @@
     "salary":18102000.0
   },
   {
+    "espn_id":"4395712",
+    "PLAYER_NAME":"Andrew Nembhard",
+    "SEASON":"2026-27",
+    "salary":19550160.0
+  },
+  {
     "espn_id":"4396909",
     "PLAYER_NAME":"Aaron Nesmith",
     "SEASON":"2022-23",
@@ -3027,6 +3753,12 @@
     "espn_id":"4396909",
     "PLAYER_NAME":"Aaron Nesmith",
     "SEASON":"2025-26",
+    "salary":11000000.0
+  },
+  {
+    "espn_id":"4396909",
+    "PLAYER_NAME":"Aaron Nesmith",
+    "SEASON":"2026-27",
     "salary":11000000.0
   },
   {
@@ -3072,6 +3804,12 @@
     "salary":2790720.0
   },
   {
+    "espn_id":"4433076",
+    "PLAYER_NAME":"Ben Sheppard",
+    "SEASON":"2026-27",
+    "salary":5031668.0
+  },
+  {
     "espn_id":"3149673",
     "PLAYER_NAME":"Pascal Siakam",
     "SEASON":"2022-23",
@@ -3094,6 +3832,12 @@
     "PLAYER_NAME":"Pascal Siakam",
     "SEASON":"2025-26",
     "salary":45550512.0
+  },
+  {
+    "espn_id":"3149673",
+    "PLAYER_NAME":"Pascal Siakam",
+    "SEASON":"2026-27",
+    "salary":48924624.0
   },
   {
     "espn_id":"4278355",
@@ -3120,6 +3864,12 @@
     "salary":14000000.0
   },
   {
+    "espn_id":"4278355",
+    "PLAYER_NAME":"Obi Toppin",
+    "SEASON":"2026-27",
+    "salary":15000000.0
+  },
+  {
     "espn_id":"5106060",
     "PLAYER_NAME":"Jarace Walker",
     "SEASON":"2023-24",
@@ -3136,6 +3886,12 @@
     "PLAYER_NAME":"Jarace Walker",
     "SEASON":"2025-26",
     "salary":6665520.0
+  },
+  {
+    "espn_id":"5106060",
+    "PLAYER_NAME":"Jarace Walker",
+    "SEASON":"2026-27",
+    "salary":8478541.0
   },
   {
     "espn_id":"4017837",
@@ -3162,6 +3918,12 @@
     "salary":18102000.0
   },
   {
+    "espn_id":"4017837",
+    "PLAYER_NAME":"Ivica Zubac",
+    "SEASON":"2026-27",
+    "salary":20342140.0
+  },
+  {
     "espn_id":"6580",
     "PLAYER_NAME":"Bradley Beal",
     "SEASON":"2022-23",
@@ -3186,10 +3948,22 @@
     "salary":5354000.0
   },
   {
+    "espn_id":"6580",
+    "PLAYER_NAME":"Bradley Beal",
+    "SEASON":"2026-27",
+    "salary":5621700.0
+  },
+  {
     "espn_id":"4433569",
     "PLAYER_NAME":"Johni Broome",
     "SEASON":"2025-26",
     "salary":1272870.0
+  },
+  {
+    "espn_id":"4433569",
+    "PLAYER_NAME":"Johni Broome",
+    "SEASON":"2026-27",
+    "salary":2150917.0
   },
   {
     "espn_id":"4845363",
@@ -3202,6 +3976,12 @@
     "PLAYER_NAME":"Cam Christie",
     "SEASON":"2025-26",
     "salary":1955377.0
+  },
+  {
+    "espn_id":"4845363",
+    "PLAYER_NAME":"Cam Christie",
+    "SEASON":"2026-27",
+    "salary":2296271.0
   },
   {
     "espn_id":"5106258",
@@ -3220,6 +4000,12 @@
     "PLAYER_NAME":"Gradey Dick",
     "SEASON":"2025-26",
     "salary":4990560.0
+  },
+  {
+    "espn_id":"5106258",
+    "PLAYER_NAME":"Gradey Dick",
+    "SEASON":"2026-27",
+    "salary":7131510.0
   },
   {
     "espn_id":"2991139",
@@ -3246,6 +4032,12 @@
     "salary":5426000.0
   },
   {
+    "espn_id":"2991139",
+    "PLAYER_NAME":"Kris Dunn",
+    "SEASON":"2026-27",
+    "salary":5684800.0
+  },
+  {
     "espn_id":"4396907",
     "PLAYER_NAME":"Darius Garland",
     "SEASON":"2022-23",
@@ -3268,6 +4060,12 @@
     "PLAYER_NAME":"Darius Garland",
     "SEASON":"2025-26",
     "salary":39446090.0
+  },
+  {
+    "espn_id":"4396907",
+    "PLAYER_NAME":"Darius Garland",
+    "SEASON":"2026-27",
+    "salary":42166510.0
   },
   {
     "espn_id":"4066648",
@@ -3318,6 +4116,12 @@
     "salary":38095238.0
   },
   {
+    "espn_id":"3913176",
+    "PLAYER_NAME":"Brandon Ingram",
+    "SEASON":"2026-27",
+    "salary":40000000.0
+  },
+  {
     "espn_id":"4432170",
     "PLAYER_NAME":"Isaiah Jackson",
     "SEASON":"2022-23",
@@ -3339,6 +4143,12 @@
     "espn_id":"4432170",
     "PLAYER_NAME":"Isaiah Jackson",
     "SEASON":"2025-26",
+    "salary":7000000.0
+  },
+  {
+    "espn_id":"4432170",
+    "PLAYER_NAME":"Isaiah Jackson",
+    "SEASON":"2026-27",
     "salary":7000000.0
   },
   {
@@ -3366,6 +4176,12 @@
     "salary":10000000.0
   },
   {
+    "espn_id":"3936099",
+    "PLAYER_NAME":"Derrick Jones Jr.",
+    "SEASON":"2026-27",
+    "salary":10476190.0
+  },
+  {
     "espn_id":"3448",
     "PLAYER_NAME":"Brook Lopez",
     "SEASON":"2022-23",
@@ -3390,6 +4206,12 @@
     "salary":8750000.0
   },
   {
+    "espn_id":"3448",
+    "PLAYER_NAME":"Brook Lopez",
+    "SEASON":"2026-27",
+    "salary":8750000.0
+  },
+  {
     "espn_id":"4396818",
     "PLAYER_NAME":"Jordan Miller",
     "SEASON":"2024-25",
@@ -3402,10 +4224,22 @@
     "salary":712637.0
   },
   {
+    "espn_id":"4396818",
+    "PLAYER_NAME":"Jordan Miller",
+    "SEASON":"2026-27",
+    "salary":2497812.0
+  },
+  {
     "espn_id":"5108024",
     "PLAYER_NAME":"Yanic Konan Niederhauser",
     "SEASON":"2025-26",
     "salary":2743800.0
+  },
+  {
+    "espn_id":"5108024",
+    "PLAYER_NAME":"Yanic Konan Niederhauser",
+    "SEASON":"2026-27",
+    "salary":2880960.0
   },
   {
     "espn_id":"4398390",
@@ -3424,6 +4258,18 @@
     "PLAYER_NAME":"Jalen Pickett",
     "SEASON":"2025-26",
     "salary":2221677.0
+  },
+  {
+    "espn_id":"4398390",
+    "PLAYER_NAME":"Jalen Pickett",
+    "SEASON":"2026-27",
+    "salary":2406205.0
+  },
+  {
+    "espn_id":"4702352",
+    "PLAYER_NAME":"Kobe Sanders",
+    "SEASON":"2026-27",
+    "salary":2150917.0
   },
   {
     "espn_id":"4065778",
@@ -3448,6 +4294,12 @@
     "PLAYER_NAME":"Max Strus",
     "SEASON":"2025-26",
     "salary":15936452.0
+  },
+  {
+    "espn_id":"4065778",
+    "PLAYER_NAME":"Max Strus",
+    "SEASON":"2026-27",
+    "salary":16660836.0
   },
   {
     "espn_id":"4683749",
@@ -3478,6 +4330,12 @@
     "PLAYER_NAME":"Luka Doncic",
     "SEASON":"2025-26",
     "salary":54126450.0
+  },
+  {
+    "espn_id":"3945274",
+    "PLAYER_NAME":"Luka Doncic",
+    "SEASON":"2026-27",
+    "salary":49500000.0
   },
   {
     "espn_id":"4397014",
@@ -3528,6 +4386,12 @@
     "salary":6000000.0
   },
   {
+    "espn_id":"4868423",
+    "PLAYER_NAME":"Jaden Hardy",
+    "SEASON":"2026-27",
+    "salary":6000000.0
+  },
+  {
     "espn_id":"4683774",
     "PLAYER_NAME":"Bronny James",
     "SEASON":"2024-25",
@@ -3538,6 +4402,12 @@
     "PLAYER_NAME":"Bronny James",
     "SEASON":"2025-26",
     "salary":1955377.0
+  },
+  {
+    "espn_id":"4683774",
+    "PLAYER_NAME":"Bronny James",
+    "SEASON":"2026-27",
+    "salary":2296274.0
   },
   {
     "espn_id":"4433136",
@@ -3576,6 +4446,12 @@
     "salary":4010160.0
   },
   {
+    "espn_id":"4897943",
+    "PLAYER_NAME":"Dalton Knecht",
+    "SEASON":"2026-27",
+    "salary":4201080.0
+  },
+  {
     "espn_id":"4592691",
     "PLAYER_NAME":"Jake LaRavia",
     "SEASON":"2022-23",
@@ -3600,6 +4476,12 @@
     "salary":6000000.0
   },
   {
+    "espn_id":"4592691",
+    "PLAYER_NAME":"Jake LaRavia",
+    "SEASON":"2026-27",
+    "salary":6000000.0
+  },
+  {
     "espn_id":"3155535",
     "PLAYER_NAME":"Kevon Looney",
     "SEASON":"2022-23",
@@ -3621,6 +4503,12 @@
     "espn_id":"3155535",
     "PLAYER_NAME":"Kevon Looney",
     "SEASON":"2025-26",
+    "salary":8000000.0
+  },
+  {
+    "espn_id":"3155535",
+    "PLAYER_NAME":"Kevon Looney",
+    "SEASON":"2026-27",
     "salary":8000000.0
   },
   {
@@ -3702,6 +4590,12 @@
     "salary":1272870.0
   },
   {
+    "espn_id":"5060631",
+    "PLAYER_NAME":"Adou Thiero",
+    "SEASON":"2026-27",
+    "salary":2150917.0
+  },
+  {
     "espn_id":"3907498",
     "PLAYER_NAME":"Matisse Thybulle",
     "SEASON":"2022-23",
@@ -3750,6 +4644,12 @@
     "salary":11571429.0
   },
   {
+    "espn_id":"4278077",
+    "PLAYER_NAME":"Jarred Vanderbilt",
+    "SEASON":"2026-27",
+    "salary":12428571.0
+  },
+  {
     "espn_id":"4433137",
     "PLAYER_NAME":"Ziaire Williams",
     "SEASON":"2022-23",
@@ -3774,16 +4674,34 @@
     "salary":6250000.0
   },
   {
+    "espn_id":"4433137",
+    "PLAYER_NAME":"Ziaire Williams",
+    "SEASON":"2026-27",
+    "salary":6250000.0
+  },
+  {
     "espn_id":"4896372",
     "PLAYER_NAME":"Walter Clayton Jr.",
     "SEASON":"2025-26",
     "salary":3991320.0
   },
   {
+    "espn_id":"4896372",
+    "PLAYER_NAME":"Walter Clayton Jr.",
+    "SEASON":"2026-27",
+    "salary":4190520.0
+  },
+  {
     "espn_id":"4903027",
     "PLAYER_NAME":"Cedric Coward",
     "SEASON":"2025-26",
     "salary":5715120.0
+  },
+  {
+    "espn_id":"4903027",
+    "PLAYER_NAME":"Cedric Coward",
+    "SEASON":"2026-27",
+    "salary":6001080.0
   },
   {
     "espn_id":"4600663",
@@ -3796,6 +4714,12 @@
     "PLAYER_NAME":"Zach Edey",
     "SEASON":"2025-26",
     "salary":6045000.0
+  },
+  {
+    "espn_id":"4600663",
+    "PLAYER_NAME":"Zach Edey",
+    "SEASON":"2026-27",
+    "salary":6332760.0
   },
   {
     "espn_id":"2991070",
@@ -3822,6 +4746,12 @@
     "salary":32000000.0
   },
   {
+    "espn_id":"2991070",
+    "PLAYER_NAME":"Jerami Grant",
+    "SEASON":"2026-27",
+    "salary":34206897.0
+  },
+  {
     "espn_id":"4683750",
     "PLAYER_NAME":"Jordan Hawkins",
     "SEASON":"2023-24",
@@ -3838,6 +4768,12 @@
     "PLAYER_NAME":"Jordan Hawkins",
     "SEASON":"2025-26",
     "salary":4741320.0
+  },
+  {
+    "espn_id":"4683750",
+    "PLAYER_NAME":"Jordan Hawkins",
+    "SEASON":"2026-27",
+    "salary":7021895.0
   },
   {
     "espn_id":"4684806",
@@ -3858,6 +4794,12 @@
     "salary":6127080.0
   },
   {
+    "espn_id":"4684806",
+    "PLAYER_NAME":"Taylor Hendricks",
+    "SEASON":"2026-27",
+    "salary":7805900.0
+  },
+  {
     "espn_id":"5105550",
     "PLAYER_NAME":"GG Jackson",
     "SEASON":"2023-24",
@@ -3874,6 +4816,12 @@
     "PLAYER_NAME":"GG Jackson",
     "SEASON":"2025-26",
     "salary":2221677.0
+  },
+  {
+    "espn_id":"5105550",
+    "PLAYER_NAME":"GG Jackson",
+    "SEASON":"2026-27",
+    "salary":2406205.0
   },
   {
     "espn_id":"4065733",
@@ -3894,6 +4842,12 @@
     "salary":8781000.0
   },
   {
+    "espn_id":"4065733",
+    "PLAYER_NAME":"Ty Jerome",
+    "SEASON":"2026-27",
+    "salary":9220050.0
+  },
+  {
     "espn_id":"4594326",
     "PLAYER_NAME":"Kris Murray",
     "SEASON":"2023-24",
@@ -3912,10 +4866,22 @@
     "salary":3132000.0
   },
   {
+    "espn_id":"4594326",
+    "PLAYER_NAME":"Kris Murray",
+    "SEASON":"2026-27",
+    "salary":5315004.0
+  },
+  {
     "espn_id":"4432185",
     "PLAYER_NAME":"Micah Peavy",
     "SEASON":"2025-26",
     "salary":1272970.0
+  },
+  {
+    "espn_id":"4432185",
+    "PLAYER_NAME":"Micah Peavy",
+    "SEASON":"2026-27",
+    "salary":2150917.0
   },
   {
     "espn_id":"4431785",
@@ -3928,6 +4894,12 @@
     "PLAYER_NAME":"Scotty Pippen Jr.",
     "SEASON":"2025-26",
     "salary":2270735.0
+  },
+  {
+    "espn_id":"4431785",
+    "PLAYER_NAME":"Scotty Pippen Jr.",
+    "SEASON":"2026-27",
+    "salary":2461462.0
   },
   {
     "espn_id":"4593016",
@@ -3960,6 +4932,12 @@
     "salary":527879.0
   },
   {
+    "espn_id":"4595400",
+    "PLAYER_NAME":"Olivier-Maxence Prosper",
+    "SEASON":"2026-27",
+    "salary":2497812.0
+  },
+  {
     "espn_id":"3136776",
     "PLAYER_NAME":"D'Angelo Russell",
     "SEASON":"2022-23",
@@ -3984,10 +4962,22 @@
     "salary":5685000.0
   },
   {
+    "espn_id":"3136776",
+    "PLAYER_NAME":"D'Angelo Russell",
+    "SEASON":"2026-27",
+    "salary":5969250.0
+  },
+  {
     "espn_id":"4433083",
     "PLAYER_NAME":"Cam Spencer",
     "SEASON":"2025-26",
     "salary":2537989.0
+  },
+  {
+    "espn_id":"4433083",
+    "PLAYER_NAME":"Cam Spencer",
+    "SEASON":"2026-27",
+    "salary":2411090.0
   },
   {
     "espn_id":"4432810",
@@ -4014,6 +5004,12 @@
     "salary":15000000.0
   },
   {
+    "espn_id":"4432810",
+    "PLAYER_NAME":"Isaiah Stewart",
+    "SEASON":"2026-27",
+    "salary":15000000.0
+  },
+  {
     "espn_id":"5112087",
     "PLAYER_NAME":"Jaylen Wells",
     "SEASON":"2024-25",
@@ -4024,6 +5020,12 @@
     "PLAYER_NAME":"Jaylen Wells",
     "SEASON":"2025-26",
     "salary":1955377.0
+  },
+  {
+    "espn_id":"5112087",
+    "PLAYER_NAME":"Jaylen Wells",
+    "SEASON":"2026-27",
+    "salary":2296271.0
   },
   {
     "espn_id":"4066261",
@@ -4050,6 +5052,12 @@
     "salary":37096620.0
   },
   {
+    "espn_id":"4066261",
+    "PLAYER_NAME":"Bam Adebayo",
+    "SEASON":"2026-27",
+    "salary":49500000.0
+  },
+  {
     "espn_id":"3032977",
     "PLAYER_NAME":"Giannis Antetokounmpo",
     "SEASON":"2022-23",
@@ -4072,6 +5080,12 @@
     "PLAYER_NAME":"Giannis Antetokounmpo",
     "SEASON":"2025-26",
     "salary":54126450.0
+  },
+  {
+    "espn_id":"3032977",
+    "PLAYER_NAME":"Giannis Antetokounmpo",
+    "SEASON":"2026-27",
+    "salary":58456566.0
   },
   {
     "espn_id":"3899664",
@@ -4102,6 +5116,12 @@
     "PLAYER_NAME":"Myron Gardner",
     "SEASON":"2025-26",
     "salary":395029.0
+  },
+  {
+    "espn_id":"4431772",
+    "PLAYER_NAME":"Myron Gardner",
+    "SEASON":"2026-27",
+    "salary":2150917.0
   },
   {
     "espn_id":"2528210",
@@ -4164,6 +5184,12 @@
     "salary":4445417.0
   },
   {
+    "espn_id":"4997528",
+    "PLAYER_NAME":"Nikola Jovic",
+    "SEASON":"2026-27",
+    "salary":16200000.0
+  },
+  {
     "espn_id":"4601025",
     "PLAYER_NAME":"Pelle Larsson",
     "SEASON":"2024-25",
@@ -4174,6 +5200,12 @@
     "PLAYER_NAME":"Pelle Larsson",
     "SEASON":"2025-26",
     "salary":1955377.0
+  },
+  {
+    "espn_id":"4601025",
+    "PLAYER_NAME":"Pelle Larsson",
+    "SEASON":"2026-27",
+    "salary":2296271.0
   },
   {
     "espn_id":"4278053",
@@ -4200,6 +5232,12 @@
     "salary":11600000.0
   },
   {
+    "espn_id":"4278053",
+    "PLAYER_NAME":"Davion Mitchell",
+    "SEASON":"2026-27",
+    "salary":12400000.0
+  },
+  {
     "espn_id":"3064482",
     "PLAYER_NAME":"Bobby Portis",
     "SEASON":"2022-23",
@@ -4222,6 +5260,12 @@
     "PLAYER_NAME":"Bobby Portis",
     "SEASON":"2025-26",
     "salary":13580247.0
+  },
+  {
+    "espn_id":"3064482",
+    "PLAYER_NAME":"Bobby Portis",
+    "SEASON":"2026-27",
+    "salary":14521414.0
   },
   {
     "espn_id":"4278076",
@@ -4260,6 +5304,12 @@
     "salary":2378870.0
   },
   {
+    "espn_id":"4066993",
+    "PLAYER_NAME":"Dru Smith",
+    "SEASON":"2026-27",
+    "salary":2584359.0
+  },
+  {
     "espn_id":"6475",
     "PLAYER_NAME":"Klay Thompson",
     "SEASON":"2022-23",
@@ -4284,6 +5334,12 @@
     "salary":16666667.0
   },
   {
+    "espn_id":"6475",
+    "PLAYER_NAME":"Klay Thompson",
+    "SEASON":"2026-27",
+    "salary":17460317.0
+  },
+  {
     "espn_id":"3059319",
     "PLAYER_NAME":"Andrew Wiggins",
     "SEASON":"2022-23",
@@ -4306,6 +5362,12 @@
     "PLAYER_NAME":"Andrew Wiggins",
     "SEASON":"2025-26",
     "salary":28223214.0
+  },
+  {
+    "espn_id":"3059319",
+    "PLAYER_NAME":"Andrew Wiggins",
+    "SEASON":"2026-27",
+    "salary":30169643.0
   },
   {
     "espn_id":"4997526",
@@ -4350,6 +5412,12 @@
     "salary":2301587.0
   },
   {
+    "espn_id":"4397475",
+    "PLAYER_NAME":"AJ Green",
+    "SEASON":"2026-27",
+    "salary":10044643.0
+  },
+  {
     "espn_id":"4395725",
     "PLAYER_NAME":"Tyler Herro",
     "SEASON":"2022-23",
@@ -4374,10 +5442,22 @@
     "salary":31000000.0
   },
   {
+    "espn_id":"4395725",
+    "PLAYER_NAME":"Tyler Herro",
+    "SEASON":"2026-27",
+    "salary":33000000.0
+  },
+  {
     "espn_id":"5214640",
     "PLAYER_NAME":"Kasparas Jakucionis",
     "SEASON":"2025-26",
     "salary":3658800.0
+  },
+  {
+    "espn_id":"5214640",
+    "PLAYER_NAME":"Kasparas Jakucionis",
+    "SEASON":"2026-27",
+    "salary":3841680.0
   },
   {
     "espn_id":"4432848",
@@ -4398,10 +5478,22 @@
     "salary":3861600.0
   },
   {
+    "espn_id":"4432848",
+    "PLAYER_NAME":"Jaime Jaquez Jr.",
+    "SEASON":"2026-27",
+    "salary":5939141.0
+  },
+  {
     "espn_id":"4697268",
     "PLAYER_NAME":"Kam Jones",
     "SEASON":"2025-26",
     "salary":1272870.0
+  },
+  {
+    "espn_id":"4697268",
+    "PLAYER_NAME":"Kam Jones",
+    "SEASON":"2026-27",
+    "salary":2150917.0
   },
   {
     "espn_id":"3134907",
@@ -4428,6 +5520,12 @@
     "salary":21810605.0
   },
   {
+    "espn_id":"3134907",
+    "PLAYER_NAME":"Kyle Kuzma",
+    "SEASON":"2026-27",
+    "salary":20345152.0
+  },
+  {
     "espn_id":"2991043",
     "PLAYER_NAME":"Caris LeVert",
     "SEASON":"2022-23",
@@ -4450,6 +5548,12 @@
     "PLAYER_NAME":"Caris LeVert",
     "SEASON":"2025-26",
     "salary":14104000.0
+  },
+  {
+    "espn_id":"2991043",
+    "PLAYER_NAME":"Caris LeVert",
+    "SEASON":"2026-27",
+    "salary":14809200.0
   },
   {
     "espn_id":"4397140",
@@ -4476,6 +5580,12 @@
     "salary":5134000.0
   },
   {
+    "espn_id":"4397140",
+    "PLAYER_NAME":"Kevin Porter Jr.",
+    "SEASON":"2026-27",
+    "salary":5390700.0
+  },
+  {
     "espn_id":"4591725",
     "PLAYER_NAME":"Ryan Rollins",
     "SEASON":"2022-23",
@@ -4491,6 +5601,12 @@
     "espn_id":"4591725",
     "PLAYER_NAME":"Ryan Rollins",
     "SEASON":"2025-26",
+    "salary":4000000.0
+  },
+  {
+    "espn_id":"4591725",
+    "PLAYER_NAME":"Ryan Rollins",
+    "SEASON":"2026-27",
     "salary":4000000.0
   },
   {
@@ -4566,6 +5682,12 @@
     "salary":25318251.0
   },
   {
+    "espn_id":"3133628",
+    "PLAYER_NAME":"Myles Turner",
+    "SEASON":"2026-27",
+    "salary":26584164.0
+  },
+  {
     "espn_id":"5105623",
     "PLAYER_NAME":"Kel'el Ware",
     "SEASON":"2024-25",
@@ -4576,6 +5698,12 @@
     "PLAYER_NAME":"Kel'el Ware",
     "SEASON":"2025-26",
     "salary":4443360.0
+  },
+  {
+    "espn_id":"5105623",
+    "PLAYER_NAME":"Kel'el Ware",
+    "SEASON":"2026-27",
+    "salary":4654920.0
   },
   {
     "espn_id":"4432816",
@@ -4602,10 +5730,22 @@
     "salary":37958760.0
   },
   {
+    "espn_id":"4432816",
+    "PLAYER_NAME":"LaMelo Ball",
+    "SEASON":"2026-27",
+    "salary":40770520.0
+  },
+  {
     "espn_id":"5279133",
     "PLAYER_NAME":"Joan Beringer",
     "SEASON":"2025-26",
     "salary":4201080.0
+  },
+  {
+    "espn_id":"5279133",
+    "PLAYER_NAME":"Joan Beringer",
+    "SEASON":"2026-27",
+    "salary":4411200.0
   },
   {
     "espn_id":"4432247",
@@ -4618,6 +5758,12 @@
     "PLAYER_NAME":"Jaylen Clark",
     "SEASON":"2025-26",
     "salary":2191897.0
+  },
+  {
+    "espn_id":"4432247",
+    "PLAYER_NAME":"Jaylen Clark",
+    "SEASON":"2026-27",
+    "salary":3086420.0
   },
   {
     "espn_id":"3934673",
@@ -4692,6 +5838,12 @@
     "salary":45550512.0
   },
   {
+    "espn_id":"4594268",
+    "PLAYER_NAME":"Anthony Edwards",
+    "SEASON":"2026-27",
+    "salary":48924624.0
+  },
+  {
     "espn_id":"3032976",
     "PLAYER_NAME":"Rudy Gobert",
     "SEASON":"2022-23",
@@ -4714,6 +5866,12 @@
     "PLAYER_NAME":"Rudy Gobert",
     "SEASON":"2025-26",
     "salary":35000000.0
+  },
+  {
+    "espn_id":"3032976",
+    "PLAYER_NAME":"Rudy Gobert",
+    "SEASON":"2026-27",
+    "salary":36500000.0
   },
   {
     "espn_id":"4592492",
@@ -4764,6 +5922,12 @@
     "salary":6165000.0
   },
   {
+    "espn_id":"3134932",
+    "PLAYER_NAME":"John Konchar",
+    "SEASON":"2026-27",
+    "salary":6165000.0
+  },
+  {
     "espn_id":"4433247",
     "PLAYER_NAME":"Jonathan Kuminga",
     "SEASON":"2022-23",
@@ -4786,6 +5950,12 @@
     "PLAYER_NAME":"Jonathan Kuminga",
     "SEASON":"2025-26",
     "salary":22500000.0
+  },
+  {
+    "espn_id":"4433247",
+    "PLAYER_NAME":"Jonathan Kuminga",
+    "SEASON":"2026-27",
+    "salary":24300000.0
   },
   {
     "espn_id":"3136196",
@@ -4830,6 +6000,12 @@
     "salary":24858622.0
   },
   {
+    "espn_id":"4431671",
+    "PLAYER_NAME":"Jaden McDaniels",
+    "SEASON":"2026-27",
+    "salary":26200001.0
+  },
+  {
     "espn_id":"5105553",
     "PLAYER_NAME":"Julian Phillips",
     "SEASON":"2023-24",
@@ -4860,6 +6036,12 @@
     "salary":2674080.0
   },
   {
+    "espn_id":"4432847",
+    "PLAYER_NAME":"Terrence Shannon Jr.",
+    "SEASON":"2026-27",
+    "salary":2801640.0
+  },
+  {
     "espn_id":"4895758",
     "PLAYER_NAME":"Cody Williams",
     "SEASON":"2024-25",
@@ -4870,6 +6052,12 @@
     "PLAYER_NAME":"Cody Williams",
     "SEASON":"2025-26",
     "salary":5742480.0
+  },
+  {
+    "espn_id":"4895758",
+    "PLAYER_NAME":"Cody Williams",
+    "SEASON":"2026-27",
+    "salary":6015600.0
   },
   {
     "espn_id":"4397136",
@@ -4896,10 +6084,22 @@
     "salary":6118644.0
   },
   {
+    "espn_id":"4397136",
+    "PLAYER_NAME":"Saddiq Bey",
+    "SEASON":"2026-27",
+    "salary":6440678.0
+  },
+  {
     "espn_id":"5144091",
     "PLAYER_NAME":"Jeremiah Fears",
     "SEASON":"2025-26",
     "salary":7520040.0
+  },
+  {
+    "espn_id":"5144091",
+    "PLAYER_NAME":"Jeremiah Fears",
+    "SEASON":"2026-27",
+    "salary":7896240.0
   },
   {
     "espn_id":"5170947",
@@ -4912,6 +6112,12 @@
     "PLAYER_NAME":"AJ Johnson",
     "SEASON":"2025-26",
     "salary":3090480.0
+  },
+  {
+    "espn_id":"5170947",
+    "PLAYER_NAME":"AJ Johnson",
+    "SEASON":"2026-27",
+    "salary":3237120.0
   },
   {
     "espn_id":"4277813",
@@ -4936,6 +6142,12 @@
     "PLAYER_NAME":"Herbert Jones",
     "SEASON":"2025-26",
     "salary":13937574.0
+  },
+  {
+    "espn_id":"4277813",
+    "PLAYER_NAME":"Herbert Jones",
+    "SEASON":"2026-27",
+    "salary":14898786.0
   },
   {
     "espn_id":"3442",
@@ -4998,6 +6210,12 @@
     "salary":1955377.0
   },
   {
+    "espn_id":"4997538",
+    "PLAYER_NAME":"Karlo Matkovic",
+    "SEASON":"2026-27",
+    "salary":2296271.0
+  },
+  {
     "espn_id":"4576086",
     "PLAYER_NAME":"Bryce McGowens",
     "SEASON":"2022-23",
@@ -5022,6 +6240,12 @@
     "salary":724598.0
   },
   {
+    "espn_id":"4576086",
+    "PLAYER_NAME":"Bryce McGowens",
+    "SEASON":"2026-27",
+    "salary":2584539.0
+  },
+  {
     "espn_id":"5061589",
     "PLAYER_NAME":"Yves Missi",
     "SEASON":"2024-25",
@@ -5032,6 +6256,12 @@
     "PLAYER_NAME":"Yves Missi",
     "SEASON":"2025-26",
     "salary":3353040.0
+  },
+  {
+    "espn_id":"5061589",
+    "PLAYER_NAME":"Yves Missi",
+    "SEASON":"2026-27",
+    "salary":3512760.0
   },
   {
     "espn_id":"4397688",
@@ -5058,6 +6288,12 @@
     "salary":25000000.0
   },
   {
+    "espn_id":"4397688",
+    "PLAYER_NAME":"Trey Murphy III",
+    "SEASON":"2026-27",
+    "salary":27000000.0
+  },
+  {
     "espn_id":"3907497",
     "PLAYER_NAME":"Dejounte Murray",
     "SEASON":"2022-23",
@@ -5080,6 +6316,12 @@
     "PLAYER_NAME":"Dejounte Murray",
     "SEASON":"2025-26",
     "salary":30801103.0
+  },
+  {
+    "espn_id":"3907497",
+    "PLAYER_NAME":"Dejounte Murray",
+    "SEASON":"2026-27",
+    "salary":32785071.0
   },
   {
     "espn_id":"4277956",
@@ -5106,10 +6348,22 @@
     "salary":31848215.0
   },
   {
+    "espn_id":"4277956",
+    "PLAYER_NAME":"Jordan Poole",
+    "SEASON":"2026-27",
+    "salary":34044642.0
+  },
+  {
     "espn_id":"4869780",
     "PLAYER_NAME":"Derik Queen",
     "SEASON":"2025-26",
     "salary":5157960.0
+  },
+  {
+    "espn_id":"4869780",
+    "PLAYER_NAME":"Derik Queen",
+    "SEASON":"2026-27",
+    "salary":5416080.0
   },
   {
     "espn_id":"4431675",
@@ -5136,6 +6390,12 @@
     "salary":2461463.0
   },
   {
+    "espn_id":"4431675",
+    "PLAYER_NAME":"Trendon Watford",
+    "SEASON":"2026-27",
+    "salary":2801346.0
+  },
+  {
     "espn_id":"4395628",
     "PLAYER_NAME":"Zion Williamson",
     "SEASON":"2022-23",
@@ -5160,6 +6420,12 @@
     "salary":39446090.0
   },
   {
+    "espn_id":"4395628",
+    "PLAYER_NAME":"Zion Williamson",
+    "SEASON":"2026-27",
+    "salary":42166510.0
+  },
+  {
     "espn_id":"4277869",
     "PLAYER_NAME":"Jose Alvarado",
     "SEASON":"2022-23",
@@ -5181,6 +6447,12 @@
     "espn_id":"4277869",
     "PLAYER_NAME":"Jose Alvarado",
     "SEASON":"2025-26",
+    "salary":4500000.0
+  },
+  {
+    "espn_id":"4277869",
+    "PLAYER_NAME":"Jose Alvarado",
+    "SEASON":"2026-27",
     "salary":4500000.0
   },
   {
@@ -5208,6 +6480,12 @@
     "salary":39568966.0
   },
   {
+    "espn_id":"3934719",
+    "PLAYER_NAME":"OG Anunoby",
+    "SEASON":"2026-27",
+    "salary":42500000.0
+  },
+  {
     "espn_id":"3147657",
     "PLAYER_NAME":"Mikal Bridges",
     "SEASON":"2022-23",
@@ -5232,6 +6510,12 @@
     "salary":24900000.0
   },
   {
+    "espn_id":"3147657",
+    "PLAYER_NAME":"Mikal Bridges",
+    "SEASON":"2026-27",
+    "salary":33482143.0
+  },
+  {
     "espn_id":"3934672",
     "PLAYER_NAME":"Jalen Brunson",
     "SEASON":"2022-23",
@@ -5254,6 +6538,12 @@
     "PLAYER_NAME":"Jalen Brunson",
     "SEASON":"2025-26",
     "salary":34944001.0
+  },
+  {
+    "espn_id":"3934672",
+    "PLAYER_NAME":"Jalen Brunson",
+    "SEASON":"2026-27",
+    "salary":37739521.0
   },
   {
     "espn_id":"2528426",
@@ -5290,6 +6580,12 @@
     "PLAYER_NAME":"Pacome Dadiet",
     "SEASON":"2025-26",
     "salary":2847600.0
+  },
+  {
+    "espn_id":"5211983",
+    "PLAYER_NAME":"Pacome Dadiet",
+    "SEASON":"2026-27",
+    "salary":2983680.0
   },
   {
     "espn_id":"5289900",
@@ -5346,6 +6642,12 @@
     "salary":19472240.0
   },
   {
+    "espn_id":"3062679",
+    "PLAYER_NAME":"Josh Hart",
+    "SEASON":"2026-27",
+    "salary":20923760.0
+  },
+  {
     "espn_id":"4433225",
     "PLAYER_NAME":"Tyler Kolek",
     "SEASON":"2024-25",
@@ -5356,6 +6658,12 @@
     "PLAYER_NAME":"Tyler Kolek",
     "SEASON":"2025-26",
     "salary":2191897.0
+  },
+  {
+    "espn_id":"4433225",
+    "PLAYER_NAME":"Tyler Kolek",
+    "SEASON":"2026-27",
+    "salary":2296271.0
   },
   {
     "espn_id":"4431823",
@@ -5380,6 +6688,12 @@
     "PLAYER_NAME":"Miles McBride",
     "SEASON":"2025-26",
     "salary":4333333.0
+  },
+  {
+    "espn_id":"4431823",
+    "PLAYER_NAME":"Miles McBride",
+    "SEASON":"2026-27",
+    "salary":3956523.0
   },
   {
     "espn_id":"3914044",
@@ -5430,6 +6744,12 @@
     "salary":54126450.0
   },
   {
+    "espn_id":"3136195",
+    "PLAYER_NAME":"Karl-Anthony Towns",
+    "SEASON":"2026-27",
+    "salary":57078728.0
+  },
+  {
     "espn_id":"2991350",
     "PLAYER_NAME":"Alex Caruso",
     "SEASON":"2022-23",
@@ -5452,6 +6772,12 @@
     "PLAYER_NAME":"Alex Caruso",
     "SEASON":"2025-26",
     "salary":18102000.0
+  },
+  {
+    "espn_id":"2991350",
+    "PLAYER_NAME":"Alex Caruso",
+    "SEASON":"2026-27",
+    "salary":19550160.0
   },
   {
     "espn_id":"4278073",
@@ -5478,6 +6804,12 @@
     "salary":38333050.0
   },
   {
+    "espn_id":"4278073",
+    "PLAYER_NAME":"Shai Gilgeous-Alexander",
+    "SEASON":"2026-27",
+    "salary":40806150.0
+  },
+  {
     "espn_id":"4222252",
     "PLAYER_NAME":"Isaiah Hartenstein",
     "SEASON":"2022-23",
@@ -5499,6 +6831,12 @@
     "espn_id":"4222252",
     "PLAYER_NAME":"Isaiah Hartenstein",
     "SEASON":"2025-26",
+    "salary":28500000.0
+  },
+  {
+    "espn_id":"4222252",
+    "PLAYER_NAME":"Isaiah Hartenstein",
+    "SEASON":"2026-27",
     "salary":28500000.0
   },
   {
@@ -5526,6 +6864,12 @@
     "salary":13731368.0
   },
   {
+    "espn_id":"4433255",
+    "PLAYER_NAME":"Chet Holmgren",
+    "SEASON":"2026-27",
+    "salary":41500000.0
+  },
+  {
     "espn_id":"4683778",
     "PLAYER_NAME":"Jared McCain",
     "SEASON":"2024-25",
@@ -5538,6 +6882,12 @@
     "salary":4221360.0
   },
   {
+    "espn_id":"4683778",
+    "PLAYER_NAME":"Jared McCain",
+    "SEASON":"2026-27",
+    "salary":4422600.0
+  },
+  {
     "espn_id":"4900671",
     "PLAYER_NAME":"Ajay Mitchell",
     "SEASON":"2024-25",
@@ -5550,10 +6900,22 @@
     "salary":3000000.0
   },
   {
+    "espn_id":"4900671",
+    "PLAYER_NAME":"Ajay Mitchell",
+    "SEASON":"2026-27",
+    "salary":2850000.0
+  },
+  {
     "espn_id":"5061603",
     "PLAYER_NAME":"Thomas Sorber",
     "SEASON":"2025-26",
     "salary":4655040.0
+  },
+  {
+    "espn_id":"5061603",
+    "PLAYER_NAME":"Thomas Sorber",
+    "SEASON":"2026-27",
+    "salary":4887720.0
   },
   {
     "espn_id":"5159925",
@@ -5566,6 +6928,12 @@
     "PLAYER_NAME":"Nikola Topic",
     "SEASON":"2025-26",
     "salary":5182920.0
+  },
+  {
+    "espn_id":"5159925",
+    "PLAYER_NAME":"Nikola Topic",
+    "SEASON":"2026-27",
+    "salary":5429760.0
   },
   {
     "espn_id":"4683692",
@@ -5584,6 +6952,12 @@
     "PLAYER_NAME":"Cason Wallace",
     "SEASON":"2025-26",
     "salary":5820240.0
+  },
+  {
+    "espn_id":"4683692",
+    "PLAYER_NAME":"Cason Wallace",
+    "SEASON":"2026-27",
+    "salary":7420806.0
   },
   {
     "espn_id":"4593803",
@@ -5610,6 +6984,12 @@
     "salary":6580997.0
   },
   {
+    "espn_id":"4593803",
+    "PLAYER_NAME":"Jalen Williams",
+    "SEASON":"2026-27",
+    "salary":41500000.0
+  },
+  {
     "espn_id":"4432823",
     "PLAYER_NAME":"Jaylin Williams",
     "SEASON":"2022-23",
@@ -5634,6 +7014,12 @@
     "salary":8450794.0
   },
   {
+    "espn_id":"4432823",
+    "PLAYER_NAME":"Jaylin Williams",
+    "SEASON":"2026-27",
+    "salary":7774648.0
+  },
+  {
     "espn_id":"3133626",
     "PLAYER_NAME":"Kenrich Williams",
     "SEASON":"2022-23",
@@ -5655,6 +7041,12 @@
     "espn_id":"3133626",
     "PLAYER_NAME":"Kenrich Williams",
     "SEASON":"2025-26",
+    "salary":7163000.0
+  },
+  {
+    "espn_id":"3133626",
+    "PLAYER_NAME":"Kenrich Williams",
+    "SEASON":"2026-27",
     "salary":7163000.0
   },
   {
@@ -5682,6 +7074,12 @@
     "salary":15334769.0
   },
   {
+    "espn_id":"4432573",
+    "PLAYER_NAME":"Paolo Banchero",
+    "SEASON":"2026-27",
+    "salary":41500000.0
+  },
+  {
     "espn_id":"4066320",
     "PLAYER_NAME":"Desmond Bane",
     "SEASON":"2022-23",
@@ -5704,6 +7102,12 @@
     "PLAYER_NAME":"Desmond Bane",
     "SEASON":"2025-26",
     "salary":36725670.0
+  },
+  {
+    "espn_id":"4066320",
+    "PLAYER_NAME":"Desmond Bane",
+    "SEASON":"2026-27",
+    "salary":39446090.0
   },
   {
     "espn_id":"4348700",
@@ -5730,6 +7134,12 @@
     "salary":8333333.0
   },
   {
+    "espn_id":"4348700",
+    "PLAYER_NAME":"Goga Bitadze",
+    "SEASON":"2026-27",
+    "salary":7608696.0
+  },
+  {
     "espn_id":"4712849",
     "PLAYER_NAME":"Anthony Black",
     "SEASON":"2023-24",
@@ -5746,6 +7156,12 @@
     "PLAYER_NAME":"Anthony Black",
     "SEASON":"2025-26",
     "salary":7970280.0
+  },
+  {
+    "espn_id":"4712849",
+    "PLAYER_NAME":"Anthony Black",
+    "SEASON":"2026-27",
+    "salary":10106315.0
   },
   {
     "espn_id":"4565201",
@@ -5820,6 +7236,12 @@
     "salary":10850000.0
   },
   {
+    "espn_id":"4277847",
+    "PLAYER_NAME":"Wendell Carter Jr.",
+    "SEASON":"2026-27",
+    "salary":18102000.0
+  },
+  {
     "espn_id":"4397204",
     "PLAYER_NAME":"Colin Castleton",
     "SEASON":"2025-26",
@@ -5838,10 +7260,22 @@
     "salary":3809520.0
   },
   {
+    "espn_id":"4702382",
+    "PLAYER_NAME":"Tristan da Silva",
+    "SEASON":"2026-27",
+    "salary":3991200.0
+  },
+  {
     "espn_id":"4576085",
     "PLAYER_NAME":"JD Davison",
     "SEASON":"2025-26",
     "salary":2270735.0
+  },
+  {
+    "espn_id":"4576085",
+    "PLAYER_NAME":"JD Davison",
+    "SEASON":"2026-27",
+    "salary":2584539.0
   },
   {
     "espn_id":"4065654",
@@ -5868,16 +7302,34 @@
     "salary":15000000.0
   },
   {
+    "espn_id":"4065654",
+    "PLAYER_NAME":"Jonathan Isaac",
+    "SEASON":"2026-27",
+    "salary":14500000.0
+  },
+  {
     "espn_id":"5214637",
     "PLAYER_NAME":"Noah Penda",
     "SEASON":"2025-26",
     "salary":1272870.0
   },
   {
+    "espn_id":"5214637",
+    "PLAYER_NAME":"Noah Penda",
+    "SEASON":"2026-27",
+    "salary":2150917.0
+  },
+  {
     "espn_id":"5239561",
     "PLAYER_NAME":"Jase Richardson",
     "SEASON":"2025-26",
     "salary":2983320.0
+  },
+  {
+    "espn_id":"5239561",
+    "PLAYER_NAME":"Jase Richardson",
+    "SEASON":"2026-27",
+    "salary":3132360.0
   },
   {
     "espn_id":"4432165",
@@ -5902,6 +7354,12 @@
     "PLAYER_NAME":"Jalen Suggs",
     "SEASON":"2025-26",
     "salary":35000000.0
+  },
+  {
+    "espn_id":"4432165",
+    "PLAYER_NAME":"Jalen Suggs",
+    "SEASON":"2026-27",
+    "salary":32400000.0
   },
   {
     "espn_id":"6478",
@@ -5952,6 +7410,12 @@
     "salary":38661750.0
   },
   {
+    "espn_id":"4566434",
+    "PLAYER_NAME":"Franz Wagner",
+    "SEASON":"2026-27",
+    "salary":41754690.0
+  },
+  {
     "espn_id":"4870562",
     "PLAYER_NAME":"Dominick Barlow",
     "SEASON":"2023-24",
@@ -5970,6 +7434,12 @@
     "salary":3415000.0
   },
   {
+    "espn_id":"4870562",
+    "PLAYER_NAME":"Dominick Barlow",
+    "SEASON":"2026-27",
+    "salary":3415000.0
+  },
+  {
     "espn_id":"5105637",
     "PLAYER_NAME":"Adem Bona",
     "SEASON":"2024-25",
@@ -5980,6 +7450,12 @@
     "PLAYER_NAME":"Adem Bona",
     "SEASON":"2025-26",
     "salary":1955377.0
+  },
+  {
+    "espn_id":"5105637",
+    "PLAYER_NAME":"Adem Bona",
+    "SEASON":"2026-27",
+    "salary":2296271.0
   },
   {
     "espn_id":"3917376",
@@ -6006,6 +7482,12 @@
     "salary":53142264.0
   },
   {
+    "espn_id":"3917376",
+    "PLAYER_NAME":"Jaylen Brown",
+    "SEASON":"2026-27",
+    "salary":57078728.0
+  },
+  {
     "espn_id":"2581018",
     "PLAYER_NAME":"Kentavious Caldwell-Pope",
     "SEASON":"2022-23",
@@ -6030,10 +7512,22 @@
     "salary":21621500.0
   },
   {
+    "espn_id":"2581018",
+    "PLAYER_NAME":"Kentavious Caldwell-Pope",
+    "SEASON":"2026-27",
+    "salary":21621500.0
+  },
+  {
     "espn_id":"5124612",
     "PLAYER_NAME":"VJ Edgecombe",
     "SEASON":"2025-26",
     "salary":11108880.0
+  },
+  {
+    "espn_id":"5124612",
+    "PLAYER_NAME":"VJ Edgecombe",
+    "SEASON":"2026-27",
+    "salary":11663880.0
   },
   {
     "espn_id":"4711297",
@@ -6046,6 +7540,12 @@
     "PLAYER_NAME":"Justin Edwards",
     "SEASON":"2025-26",
     "salary":2048494.0
+  },
+  {
+    "espn_id":"4711297",
+    "PLAYER_NAME":"Justin Edwards",
+    "SEASON":"2026-27",
+    "salary":2411090.0
   },
   {
     "espn_id":"3059318",
@@ -6070,6 +7570,12 @@
     "PLAYER_NAME":"Joel Embiid",
     "SEASON":"2025-26",
     "salary":55224526.0
+  },
+  {
+    "espn_id":"3059318",
+    "PLAYER_NAME":"Joel Embiid",
+    "SEASON":"2026-27",
+    "salary":58100000.0
   },
   {
     "espn_id":"4871141",
@@ -6142,6 +7648,12 @@
     "PLAYER_NAME":"Tyrese Maxey",
     "SEASON":"2025-26",
     "salary":37958760.0
+  },
+  {
+    "espn_id":"4431678",
+    "PLAYER_NAME":"Tyrese Maxey",
+    "SEASON":"2026-27",
+    "salary":40770520.0
   },
   {
     "espn_id":"5099752",
@@ -6228,6 +7740,12 @@
     "salary":724598.0
   },
   {
+    "espn_id":"4432446",
+    "PLAYER_NAME":"Jabari Walker",
+    "SEASON":"2026-27",
+    "salary":2584539.0
+  },
+  {
     "espn_id":"3136193",
     "PLAYER_NAME":"Devin Booker",
     "SEASON":"2022-23",
@@ -6252,10 +7770,22 @@
     "salary":53142264.0
   },
   {
+    "espn_id":"3136193",
+    "PLAYER_NAME":"Devin Booker",
+    "SEASON":"2026-27",
+    "salary":57078728.0
+  },
+  {
     "espn_id":"4280245",
     "PLAYER_NAME":"Jamaree Bouyea",
     "SEASON":"2025-26",
     "salary":574210.0
+  },
+  {
+    "espn_id":"4280245",
+    "PLAYER_NAME":"Jamaree Bouyea",
+    "SEASON":"2026-27",
+    "salary":2584539.0
   },
   {
     "espn_id":"4066383",
@@ -6274,6 +7804,12 @@
     "PLAYER_NAME":"Miles Bridges",
     "SEASON":"2025-26",
     "salary":25000000.0
+  },
+  {
+    "espn_id":"4066383",
+    "PLAYER_NAME":"Miles Bridges",
+    "SEASON":"2026-27",
+    "salary":22826087.0
   },
   {
     "espn_id":"3155526",
@@ -6300,6 +7836,12 @@
     "salary":22124110.0
   },
   {
+    "espn_id":"3155526",
+    "PLAYER_NAME":"Dillon Brooks",
+    "SEASON":"2026-27",
+    "salary":19992727.0
+  },
+  {
     "espn_id":"4888725",
     "PLAYER_NAME":"Ryan Dunn",
     "SEASON":"2024-25",
@@ -6312,10 +7854,22 @@
     "salary":2657760.0
   },
   {
+    "espn_id":"4888725",
+    "PLAYER_NAME":"Ryan Dunn",
+    "SEASON":"2026-27",
+    "salary":2784240.0
+  },
+  {
     "espn_id":"5105977",
     "PLAYER_NAME":"Rasheer Fleming",
     "SEASON":"2025-26",
     "salary":1272870.0
+  },
+  {
+    "espn_id":"5105977",
+    "PLAYER_NAME":"Rasheer Fleming",
+    "SEASON":"2026-27",
+    "salary":2150917.0
   },
   {
     "espn_id":"4278585",
@@ -6366,6 +7920,12 @@
     "salary":33548499.0
   },
   {
+    "espn_id":"4437244",
+    "PLAYER_NAME":"Jalen Green",
+    "SEASON":"2026-27",
+    "salary":36251166.0
+  },
+  {
     "espn_id":"4291678",
     "PLAYER_NAME":"Haywood Highsmith",
     "SEASON":"2022-23",
@@ -6390,6 +7950,12 @@
     "salary":827984.0
   },
   {
+    "espn_id":"4291678",
+    "PLAYER_NAME":"Haywood Highsmith",
+    "SEASON":"2026-27",
+    "salary":3018158.0
+  },
+  {
     "espn_id":"4601023",
     "PLAYER_NAME":"Oso Ighodaro",
     "SEASON":"2024-25",
@@ -6400,6 +7966,12 @@
     "PLAYER_NAME":"Oso Ighodaro",
     "SEASON":"2025-26",
     "salary":1955377.0
+  },
+  {
+    "espn_id":"4601023",
+    "PLAYER_NAME":"Oso Ighodaro",
+    "SEASON":"2026-27",
+    "salary":2296271.0
   },
   {
     "espn_id":"3913174",
@@ -6442,6 +8014,12 @@
     "PLAYER_NAME":"Khaman Maluach",
     "SEASON":"2025-26",
     "salary":6016080.0
+  },
+  {
+    "espn_id":"5203685",
+    "PLAYER_NAME":"Khaman Maluach",
+    "SEASON":"2026-27",
+    "salary":6316680.0
   },
   {
     "espn_id":"4066268",
@@ -6522,6 +8100,12 @@
     "salary":14375000.0
   },
   {
+    "espn_id":"4683021",
+    "PLAYER_NAME":"Deni Avdija",
+    "SEASON":"2026-27",
+    "salary":13125000.0
+  },
+  {
     "espn_id":"4431736",
     "PLAYER_NAME":"Toumani Camara",
     "SEASON":"2023-24",
@@ -6538,6 +8122,12 @@
     "PLAYER_NAME":"Toumani Camara",
     "SEASON":"2025-26",
     "salary":2221677.0
+  },
+  {
+    "espn_id":"4431736",
+    "PLAYER_NAME":"Toumani Camara",
+    "SEASON":"2026-27",
+    "salary":18080358.0
   },
   {
     "espn_id":"4592435",
@@ -6564,6 +8154,12 @@
     "salary":688243.0
   },
   {
+    "espn_id":"5081727",
+    "PLAYER_NAME":"Sidy Cissoko",
+    "SEASON":"2026-27",
+    "salary":2497812.0
+  },
+  {
     "espn_id":"5105565",
     "PLAYER_NAME":"Donovan Clingan",
     "SEASON":"2024-25",
@@ -6576,10 +8172,22 @@
     "salary":7178400.0
   },
   {
+    "espn_id":"5105565",
+    "PLAYER_NAME":"Donovan Clingan",
+    "SEASON":"2026-27",
+    "salary":7519920.0
+  },
+  {
     "espn_id":"5217746",
     "PLAYER_NAME":"Yang Hansen",
     "SEASON":"2025-26",
     "salary":4422360.0
+  },
+  {
+    "espn_id":"5217746",
+    "PLAYER_NAME":"Yang Hansen",
+    "SEASON":"2026-27",
+    "salary":4643520.0
   },
   {
     "espn_id":"4683678",
@@ -6598,6 +8206,12 @@
     "PLAYER_NAME":"Scoot Henderson",
     "SEASON":"2025-26",
     "salary":10748040.0
+  },
+  {
+    "espn_id":"4683678",
+    "PLAYER_NAME":"Scoot Henderson",
+    "SEASON":"2026-27",
+    "salary":13585522.0
   },
   {
     "espn_id":"3995",
@@ -6624,6 +8238,12 @@
     "salary":32400000.0
   },
   {
+    "espn_id":"3995",
+    "PLAYER_NAME":"Jrue Holiday",
+    "SEASON":"2026-27",
+    "salary":34800000.0
+  },
+  {
     "espn_id":"4578893",
     "PLAYER_NAME":"Vit Krejci",
     "SEASON":"2022-23",
@@ -6640,6 +8260,12 @@
     "PLAYER_NAME":"Vit Krejci",
     "SEASON":"2025-26",
     "salary":2349578.0
+  },
+  {
+    "espn_id":"4578893",
+    "PLAYER_NAME":"Vit Krejci",
+    "SEASON":"2026-27",
+    "salary":2667944.0
   },
   {
     "espn_id":"6606",
@@ -6666,6 +8292,12 @@
     "salary":14104000.0
   },
   {
+    "espn_id":"6606",
+    "PLAYER_NAME":"Damian Lillard",
+    "SEASON":"2026-27",
+    "salary":13398000.0
+  },
+  {
     "espn_id":"4279888",
     "PLAYER_NAME":"Ja Morant",
     "SEASON":"2022-23",
@@ -6690,10 +8322,22 @@
     "salary":39446090.0
   },
   {
+    "espn_id":"4279888",
+    "PLAYER_NAME":"Ja Morant",
+    "SEASON":"2026-27",
+    "salary":42166510.0
+  },
+  {
     "espn_id":"4066399",
     "PLAYER_NAME":"Micah Potter",
     "SEASON":"2025-26",
     "salary":1527805.0
+  },
+  {
+    "espn_id":"4066399",
+    "PLAYER_NAME":"Micah Potter",
+    "SEASON":"2026-27",
+    "salary":2801346.0
   },
   {
     "espn_id":"4914336",
@@ -6718,6 +8362,12 @@
     "PLAYER_NAME":"Shaedon Sharpe",
     "SEASON":"2025-26",
     "salary":8399983.0
+  },
+  {
+    "espn_id":"4914336",
+    "PLAYER_NAME":"Shaedon Sharpe",
+    "SEASON":"2026-27",
+    "salary":20089286.0
   },
   {
     "espn_id":"4610139",
@@ -6798,10 +8448,22 @@
     "salary":871000.0
   },
   {
+    "espn_id":"4433174",
+    "PLAYER_NAME":"Dylan Cardwell",
+    "SEASON":"2026-27",
+    "salary":2150917.0
+  },
+  {
     "espn_id":"4702384",
     "PLAYER_NAME":"Nique Clifford",
     "SEASON":"2025-26",
     "salary":3108120.0
+  },
+  {
+    "espn_id":"4702384",
+    "PLAYER_NAME":"Nique Clifford",
+    "SEASON":"2026-27",
+    "salary":3263400.0
   },
   {
     "espn_id":"4065732",
@@ -6828,6 +8490,12 @@
     "salary":23303571.0
   },
   {
+    "espn_id":"4065732",
+    "PLAYER_NAME":"De'Andre Hunter",
+    "SEASON":"2026-27",
+    "salary":24910714.0
+  },
+  {
     "espn_id":"3064440",
     "PLAYER_NAME":"Zach LaVine",
     "SEASON":"2022-23",
@@ -6852,6 +8520,12 @@
     "salary":47499660.0
   },
   {
+    "espn_id":"3064440",
+    "PLAYER_NAME":"Zach LaVine",
+    "SEASON":"2026-27",
+    "salary":48967380.0
+  },
+  {
     "espn_id":"5107897",
     "PLAYER_NAME":"Jonathan Mogbo",
     "SEASON":"2024-25",
@@ -6862,6 +8536,12 @@
     "PLAYER_NAME":"Jonathan Mogbo",
     "SEASON":"2025-26",
     "salary":1955377.0
+  },
+  {
+    "espn_id":"5107897",
+    "PLAYER_NAME":"Jonathan Mogbo",
+    "SEASON":"2026-27",
+    "salary":2296271.0
   },
   {
     "espn_id":"4066262",
@@ -6888,6 +8568,12 @@
     "salary":18797618.0
   },
   {
+    "espn_id":"4066262",
+    "PLAYER_NAME":"Malik Monk",
+    "SEASON":"2026-27",
+    "salary":21190034.0
+  },
+  {
     "espn_id":"4594327",
     "PLAYER_NAME":"Keegan Murray",
     "SEASON":"2022-23",
@@ -6912,10 +8598,22 @@
     "salary":11144093.0
   },
   {
+    "espn_id":"4594327",
+    "PLAYER_NAME":"Keegan Murray",
+    "SEASON":"2026-27",
+    "salary":24137931.0
+  },
+  {
     "espn_id":"4898371",
     "PLAYER_NAME":"Maxime Raynaud",
     "SEASON":"2025-26",
     "salary":1272870.0
+  },
+  {
+    "espn_id":"4898371",
+    "PLAYER_NAME":"Maxime Raynaud",
+    "SEASON":"2026-27",
+    "salary":2150917.0
   },
   {
     "espn_id":"3155942",
@@ -6940,6 +8638,12 @@
     "PLAYER_NAME":"Domantas Sabonis",
     "SEASON":"2025-26",
     "salary":43636000.0
+  },
+  {
+    "espn_id":"3155942",
+    "PLAYER_NAME":"Domantas Sabonis",
+    "SEASON":"2026-27",
+    "salary":45472000.0
   },
   {
     "espn_id":"3907387",
@@ -6990,6 +8694,12 @@
     "salary":4900320.0
   },
   {
+    "espn_id":"5061568",
+    "PLAYER_NAME":"Carter Bryant",
+    "SEASON":"2026-27",
+    "salary":5145360.0
+  },
+  {
     "espn_id":"4845367",
     "PLAYER_NAME":"Stephon Castle",
     "SEASON":"2024-25",
@@ -7000,6 +8710,12 @@
     "PLAYER_NAME":"Stephon Castle",
     "SEASON":"2025-26",
     "salary":9560520.0
+  },
+  {
+    "espn_id":"4845367",
+    "PLAYER_NAME":"Stephon Castle",
+    "SEASON":"2026-27",
+    "salary":10015920.0
   },
   {
     "espn_id":"4592479",
@@ -7017,6 +8733,12 @@
     "espn_id":"4592479",
     "PLAYER_NAME":"Julian Champagnie",
     "SEASON":"2025-26",
+    "salary":3000000.0
+  },
+  {
+    "espn_id":"4592479",
+    "PLAYER_NAME":"Julian Champagnie",
+    "SEASON":"2026-27",
     "salary":3000000.0
   },
   {
@@ -7044,10 +8766,22 @@
     "salary":37096620.0
   },
   {
+    "espn_id":"4066259",
+    "PLAYER_NAME":"De'Aaron Fox",
+    "SEASON":"2026-27",
+    "salary":49800000.0
+  },
+  {
     "espn_id":"5037871",
     "PLAYER_NAME":"Dylan Harper",
     "SEASON":"2025-26",
     "salary":12370320.0
+  },
+  {
+    "espn_id":"5037871",
+    "PLAYER_NAME":"Dylan Harper",
+    "SEASON":"2026-27",
+    "salary":12989040.0
   },
   {
     "espn_id":"6440",
@@ -7098,6 +8832,12 @@
     "salary":17500000.0
   },
   {
+    "espn_id":"4395723",
+    "PLAYER_NAME":"Keldon Johnson",
+    "SEASON":"2026-27",
+    "salary":17500000.0
+  },
+  {
     "espn_id":"3064560",
     "PLAYER_NAME":"Luke Kornet",
     "SEASON":"2022-23",
@@ -7120,6 +8860,12 @@
     "PLAYER_NAME":"Luke Kornet",
     "SEASON":"2025-26",
     "salary":11000000.0
+  },
+  {
+    "espn_id":"3064560",
+    "PLAYER_NAME":"Luke Kornet",
+    "SEASON":"2026-27",
+    "salary":10450000.0
   },
   {
     "espn_id":"3134916",
@@ -7170,6 +8916,12 @@
     "salary":27000000.0
   },
   {
+    "espn_id":"4395630",
+    "PLAYER_NAME":"Devin Vassell",
+    "SEASON":"2026-27",
+    "salary":27000000.0
+  },
+  {
     "espn_id":"5104157",
     "PLAYER_NAME":"Victor Wembanyama",
     "SEASON":"2023-24",
@@ -7186,6 +8938,12 @@
     "PLAYER_NAME":"Victor Wembanyama",
     "SEASON":"2025-26",
     "salary":13376880.0
+  },
+  {
+    "espn_id":"5104157",
+    "PLAYER_NAME":"Victor Wembanyama",
+    "SEASON":"2026-27",
+    "salary":16868245.0
   },
   {
     "espn_id":"2993874",
@@ -7236,6 +8994,12 @@
     "salary":38661750.0
   },
   {
+    "espn_id":"4433134",
+    "PLAYER_NAME":"Scottie Barnes",
+    "SEASON":"2026-27",
+    "salary":41754690.0
+  },
+  {
     "espn_id":"4395625",
     "PLAYER_NAME":"RJ Barrett",
     "SEASON":"2022-23",
@@ -7260,6 +9024,12 @@
     "salary":27705357.0
   },
   {
+    "espn_id":"4395625",
+    "PLAYER_NAME":"RJ Barrett",
+    "SEASON":"2026-27",
+    "salary":29616071.0
+  },
+  {
     "espn_id":"4431893",
     "PLAYER_NAME":"Jamison Battle",
     "SEASON":"2024-25",
@@ -7272,6 +9042,12 @@
     "salary":1955377.0
   },
   {
+    "espn_id":"4431893",
+    "PLAYER_NAME":"Jamison Battle",
+    "SEASON":"2026-27",
+    "salary":2296271.0
+  },
+  {
     "espn_id":"4432190",
     "PLAYER_NAME":"Andre Jackson Jr.",
     "SEASON":"2023-24",
@@ -7306,6 +9082,12 @@
     "PLAYER_NAME":"Trayce Jackson-Davis",
     "SEASON":"2025-26",
     "salary":2221677.0
+  },
+  {
+    "espn_id":"4431684",
+    "PLAYER_NAME":"Trayce Jackson-Davis",
+    "SEASON":"2026-27",
+    "salary":2406205.0
   },
   {
     "espn_id":"4067017",
@@ -7350,10 +9132,22 @@
     "salary":50000000.0
   },
   {
+    "espn_id":"6450",
+    "PLAYER_NAME":"Kawhi Leonard",
+    "SEASON":"2026-27",
+    "salary":50300000.0
+  },
+  {
     "espn_id":"5093267",
     "PLAYER_NAME":"Collin Murray-Boyles",
     "SEASON":"2025-26",
     "salary":6332520.0
+  },
+  {
+    "espn_id":"5093267",
+    "PLAYER_NAME":"Collin Murray-Boyles",
+    "SEASON":"2026-27",
+    "salary":6649560.0
   },
   {
     "espn_id":"3134908",
@@ -7377,6 +9171,12 @@
     "espn_id":"3134908",
     "PLAYER_NAME":"Jakob Poeltl",
     "SEASON":"2025-26",
+    "salary":19500000.0
+  },
+  {
+    "espn_id":"3134908",
+    "PLAYER_NAME":"Jakob Poeltl",
+    "SEASON":"2026-27",
     "salary":19500000.0
   },
   {
@@ -7404,6 +9204,12 @@
     "salary":32500000.0
   },
   {
+    "espn_id":"4395724",
+    "PLAYER_NAME":"Immanuel Quickley",
+    "SEASON":"2026-27",
+    "salary":32500000.0
+  },
+  {
     "espn_id":"4432241",
     "PLAYER_NAME":"Jamal Shead",
     "SEASON":"2024-25",
@@ -7414,6 +9220,12 @@
     "PLAYER_NAME":"Jamal Shead",
     "SEASON":"2025-26",
     "salary":1955377.0
+  },
+  {
+    "espn_id":"4432241",
+    "PLAYER_NAME":"Jamal Shead",
+    "SEASON":"2026-27",
+    "salary":2296271.0
   },
   {
     "espn_id":"4684272",
@@ -7428,10 +9240,22 @@
     "salary":3638160.0
   },
   {
+    "espn_id":"4684272",
+    "PLAYER_NAME":"Ja'Kobe Walter",
+    "SEASON":"2026-27",
+    "salary":3811800.0
+  },
+  {
     "espn_id":"4873138",
     "PLAYER_NAME":"Ace Bailey",
     "SEASON":"2025-26",
     "salary":9069840.0
+  },
+  {
+    "espn_id":"4873138",
+    "PLAYER_NAME":"Ace Bailey",
+    "SEASON":"2026-27",
+    "salary":9523080.0
   },
   {
     "espn_id":"4277919",
@@ -7464,6 +9288,12 @@
     "salary":2638200.0
   },
   {
+    "espn_id":"4683766",
+    "PLAYER_NAME":"Isaiah Collier",
+    "SEASON":"2026-27",
+    "salary":2763960.0
+  },
+  {
     "espn_id":"4684793",
     "PLAYER_NAME":"Kyle Filipowski",
     "SEASON":"2024-25",
@@ -7473,6 +9303,12 @@
     "espn_id":"4684793",
     "PLAYER_NAME":"Kyle Filipowski",
     "SEASON":"2025-26",
+    "salary":3000000.0
+  },
+  {
+    "espn_id":"4684793",
+    "PLAYER_NAME":"Kyle Filipowski",
+    "SEASON":"2026-27",
     "salary":3000000.0
   },
   {
@@ -7492,6 +9328,12 @@
     "PLAYER_NAME":"Keyonte George",
     "SEASON":"2025-26",
     "salary":4278960.0
+  },
+  {
+    "espn_id":"4433627",
+    "PLAYER_NAME":"Keyonte George",
+    "SEASON":"2026-27",
+    "salary":6563925.0
   },
   {
     "espn_id":"4432811",
@@ -7516,6 +9358,12 @@
     "PLAYER_NAME":"Josh Green",
     "SEASON":"2025-26",
     "salary":13666667.0
+  },
+  {
+    "espn_id":"4432811",
+    "PLAYER_NAME":"Josh Green",
+    "SEASON":"2026-27",
+    "salary":14679012.0
   },
   {
     "espn_id":"4397077",
@@ -7566,6 +9414,12 @@
     "salary":35000000.0
   },
   {
+    "espn_id":"4277961",
+    "PLAYER_NAME":"Jaren Jackson Jr.",
+    "SEASON":"2026-27",
+    "salary":49000000.0
+  },
+  {
     "espn_id":"4066336",
     "PLAYER_NAME":"Lauri Markkanen",
     "SEASON":"2022-23",
@@ -7590,6 +9444,12 @@
     "salary":46394100.0
   },
   {
+    "espn_id":"4066336",
+    "PLAYER_NAME":"Lauri Markkanen",
+    "SEASON":"2026-27",
+    "salary":46113154.0
+  },
+  {
     "espn_id":"3133602",
     "PLAYER_NAME":"Svi Mykhailiuk",
     "SEASON":"2022-23",
@@ -7612,6 +9472,12 @@
     "PLAYER_NAME":"Svi Mykhailiuk",
     "SEASON":"2025-26",
     "salary":3675000.0
+  },
+  {
+    "espn_id":"3133602",
+    "PLAYER_NAME":"Svi Mykhailiuk",
+    "SEASON":"2026-27",
+    "salary":3850000.0
   },
   {
     "espn_id":"3102530",
@@ -7680,6 +9546,12 @@
     "salary":2693760.0
   },
   {
+    "espn_id":"5105839",
+    "PLAYER_NAME":"Brice Sensabaugh",
+    "SEASON":"2026-27",
+    "salary":4862237.0
+  },
+  {
     "espn_id":"4278129",
     "PLAYER_NAME":"Deandre Ayton",
     "SEASON":"2022-23",
@@ -7704,6 +9576,12 @@
     "salary":8104000.0
   },
   {
+    "espn_id":"4278129",
+    "PLAYER_NAME":"Deandre Ayton",
+    "SEASON":"2026-27",
+    "salary":8104000.0
+  },
+  {
     "espn_id":"4845374",
     "PLAYER_NAME":"Bub Carrington",
     "SEASON":"2024-25",
@@ -7714,6 +9592,12 @@
     "PLAYER_NAME":"Bub Carrington",
     "SEASON":"2025-26",
     "salary":4677600.0
+  },
+  {
+    "espn_id":"4845374",
+    "PLAYER_NAME":"Bub Carrington",
+    "SEASON":"2026-27",
+    "salary":4900560.0
   },
   {
     "espn_id":"4432907",
@@ -7734,6 +9618,12 @@
     "salary":2349578.0
   },
   {
+    "espn_id":"4432907",
+    "PLAYER_NAME":"Justin Champagnie",
+    "SEASON":"2026-27",
+    "salary":2667944.0
+  },
+  {
     "espn_id":"5104155",
     "PLAYER_NAME":"Bilal Coulibaly",
     "SEASON":"2023-24",
@@ -7750,6 +9640,12 @@
     "PLAYER_NAME":"Bilal Coulibaly",
     "SEASON":"2025-26",
     "salary":7275600.0
+  },
+  {
+    "espn_id":"5104155",
+    "PLAYER_NAME":"Bilal Coulibaly",
+    "SEASON":"2026-27",
+    "salary":9240012.0
   },
   {
     "espn_id":"6583",
@@ -7776,6 +9672,12 @@
     "salary":54126450.0
   },
   {
+    "espn_id":"6583",
+    "PLAYER_NAME":"Anthony Davis",
+    "SEASON":"2026-27",
+    "salary":58456566.0
+  },
+  {
     "espn_id":"5174563",
     "PLAYER_NAME":"Kyshawn George",
     "SEASON":"2024-25",
@@ -7786,6 +9688,12 @@
     "PLAYER_NAME":"Kyshawn George",
     "SEASON":"2025-26",
     "salary":2966760.0
+  },
+  {
+    "espn_id":"5174563",
+    "PLAYER_NAME":"Kyshawn George",
+    "SEASON":"2026-27",
+    "salary":3108000.0
   },
   {
     "espn_id":"2581184",
@@ -7824,6 +9732,12 @@
     "salary":8237640.0
   },
   {
+    "espn_id":"5238230",
+    "PLAYER_NAME":"Tre Johnson",
+    "SEASON":"2026-27",
+    "salary":8649600.0
+  },
+  {
     "espn_id":"4432819",
     "PLAYER_NAME":"Tre Mann",
     "SEASON":"2022-23",
@@ -7845,6 +9759,12 @@
     "espn_id":"4432819",
     "PLAYER_NAME":"Tre Mann",
     "SEASON":"2025-26",
+    "salary":8000000.0
+  },
+  {
+    "espn_id":"4432819",
+    "PLAYER_NAME":"Tre Mann",
+    "SEASON":"2026-27",
     "salary":8000000.0
   },
   {
@@ -7878,6 +9798,12 @@
     "salary":3512520.0
   },
   {
+    "espn_id":"5144126",
+    "PLAYER_NAME":"Will Riley",
+    "SEASON":"2026-27",
+    "salary":3688320.0
+  },
+  {
     "espn_id":"5160992",
     "PLAYER_NAME":"Alex Sarr",
     "SEASON":"2024-25",
@@ -7888,6 +9814,12 @@
     "PLAYER_NAME":"Alex Sarr",
     "SEASON":"2025-26",
     "salary":11808240.0
+  },
+  {
+    "espn_id":"5160992",
+    "PLAYER_NAME":"Alex Sarr",
+    "SEASON":"2026-27",
+    "salary":12370680.0
   },
   {
     "espn_id":"4997537",
@@ -7902,10 +9834,22 @@
     "salary":2857143.0
   },
   {
+    "espn_id":"4997537",
+    "PLAYER_NAME":"Tristan Vukcevic",
+    "SEASON":"2026-27",
+    "salary":3000000.0
+  },
+  {
     "espn_id":"4606840",
     "PLAYER_NAME":"Jamir Watkins",
     "SEASON":"2025-26",
     "salary":1131970.0
+  },
+  {
+    "espn_id":"4606840",
+    "PLAYER_NAME":"Jamir Watkins",
+    "SEASON":"2026-27",
+    "salary":2150917.0
   },
   {
     "espn_id":"4277905",
@@ -7930,5 +9874,11 @@
     "PLAYER_NAME":"Trae Young",
     "SEASON":"2025-26",
     "salary":46394100.0
+  },
+  {
+    "espn_id":"4277905",
+    "PLAYER_NAME":"Trae Young",
+    "SEASON":"2026-27",
+    "salary":48967380.0
   }
 ]

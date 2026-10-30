@@ -97,10 +97,15 @@ selected_attributes = st.sidebar.multiselect(
 st.sidebar.markdown("---")
 st.sidebar.info("Vector Tip: Set Max Salary in the candidate filter section to discover bargain replacement targets.")
 
-# Title Header
 st.markdown("<div class='main-title'>NBA Player Vector Similarity & Comparison Tool</div>", unsafe_allow_html=True)
 metric_label = "Weighted Euclidean" if metric_mode == "euclidean" else "Cosine Distance"
-st.markdown(f"<div class='sub-title'><b>Multi-Season Dataset (2022-23 to 2025-26)</b> | Vector Similarity ({stat_mode}) | Metric: <b>{metric_label}</b></div>", unsafe_allow_html=True)
+if seasons_available:
+    earliest_s = seasons_available[-1]
+    latest_s = seasons_available[0]
+    season_range_str = f"{earliest_s} to {latest_s}"
+else:
+    season_range_str = "Multi-Season"
+st.markdown(f"<div class='sub-title'><b>Multi-Season Dataset ({season_range_str})</b> | Vector Similarity ({stat_mode}) | Metric: <b>{metric_label}</b></div>", unsafe_allow_html=True)
 
 if not player_season_list:
     st.error("No player data loaded. Please make sure the SQLite database output/nba_data.db exists.")

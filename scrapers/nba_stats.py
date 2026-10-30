@@ -24,7 +24,7 @@ class NBAStatsScraper:
         self.session.headers.update(HEADERS)
         self.timeout = timeout
 
-    def get_active_players(self, season: str = "2025-26") -> pd.DataFrame:
+    def get_active_players(self, season: str = "2026-27") -> pd.DataFrame:
         """Fetch list of all active NBA players for a season."""
         try:
             from nba_api.stats.endpoints import commonallplayers
@@ -121,6 +121,6 @@ class NBAStatsScraper:
 
 if __name__ == "__main__":
     scraper = NBAStatsScraper()
-    multi_df = scraper.get_multi_season_player_stats(["2022-23", "2023-24", "2024-25", "2025-26"])
+    multi_df = scraper.get_multi_season_player_stats(["2022-23", "2023-24", "2024-25", "2025-26", "2026-27"])
     if not multi_df.empty:
         print(multi_df[['DISPLAY_NAME_SEASON', 'PTS', 'REB', 'AST']].head())

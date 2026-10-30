@@ -1,12 +1,12 @@
 # NBA StatTwins - Multi-Season Player Vector Similarity & Comparison Dashboard
 
-An end-to-end Python data scraping pipeline and interactive Streamlit dashboard for vector similarity searching, multi-season player comparisons, skill radar overlays, and salary vs. box score production analytics across 4 NBA seasons (2022-23, 2023-24, 2024-25, and 2025-26).
+An end-to-end Python data scraping pipeline and interactive Streamlit dashboard for vector similarity searching, multi-season player comparisons, skill radar overlays, and salary vs. box score production analytics across 5 NBA seasons (2022-23, 2023-24, 2024-25, 2025-26, and 2026-27).
 
 ---
 
 ## Key Features
 
-* **4-Season Vector Space (2,119 Profiles)**: Season-disambiguated player entities (e.g. `Luka Dončić (2025-26)` vs `Luka Dončić (2023-24)`).
+* **5-Season Vector Space**: Season-disambiguated player entities (e.g. `Luka Dončić (2026-27)` vs `Luka Dončić (2023-24)`).
 * **Historical Season-Specific Salaries**: Multi-threaded contract extraction matching real historical contract salaries for each respective season.
 * **Vector Cosine Similarity Search**: Scikit-learn Z-score feature scaling across scoring, rebounding, playmaking, shooting efficiency, and defense metrics.
 * **Comprehensive Range Filters**: Min/Max numeric text inputs for all 18 NBA statistics and salary.
